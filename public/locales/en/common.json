@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "book": "Book Hour"
+  },
+  "footer": {
+    "contact": "Contact",
+    "pages": "Pages",
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "tag": "Padel training for all levels in Osnabrück and Ibbenbüren.",
+    "based": "Osnabrück / Ibbenbüren",
+    "copy": "© 2026 Florian Molleker",
+    "tagline": "Padel training for all levels in Osnabrück and Ibbenbüren."
+  },
+  "home": {
+    "eyebrow": "Padel Coach · Osnabrück & Ibbenbüren",
+    "heroLine1": "Padel Training",
+    "heroLine2": "in Osnabrück.",
+    "heroSub": "Certified C-Trainer. From your first shot to tournament play — structured, honest, and fun.",
+    "cta1": "Request Hour",
+    "cta2": "About Me",
+    "scroll": "Scroll",
+    "photoAlt": "Florian on the court",
+    "liveTag": "LIVE · ON COURT"
+  },
+  "stats": {
+    "years": "Years Padel",
+    "cert": "Certified Trainer",
+    "locations": "Locations"
+  },
+  "philo": {
+    "eyebrow": "Method",
+    "title": "Three pillars, one goal: you playing better.",
+    "1": {
+      "title": "Technique",
+      "body": "Clean groundstrokes, bandeja, vibora, lob. Small adjustments with big impact — filmed, shown, corrected."
+    },
+    "2": {
+      "title": "Tactics",
+      "body": "Court positioning, building pressure, handling pressure. You learn to read what's happening — before it happens."
+    },
+    "3": {
+      "title": "Mindset",
+      "body": "Stay calm after mistakes. Communicate clearly with your partner. Play as a team, not as two players."
+    }
+  },
+  "audience": {
+    "eyebrow": "For Whom",
+    "title": "No matter where you are — i'll meet you there.",
+    "1": {
+      "title": "Beginners",
+      "body": "First shots, first rules, first victories. No pressure."
+    },
+    "2": {
+      "title": "Advanced",
+      "body": "You play regularly and want to break through the plateau. We'll find the leverage."
+    },
+    "3": {
+      "title": "Tournament Players",
+      "body": "Match preparation, video analysis, targeted training for your next level."
+    }
+  },
+  "gallery": {
+    "eyebrow": "On Court",
+    "title": "Impressions from training.",
+    "item1": "PHOTO · GROUP TRAINING",
+    "item2": "PHOTO · BANDEJA DETAIL",
+    "item3": "PHOTO · WIDE ANGLE COURT",
+    "item4": "PHOTO · TECHNIQUE COACHING",
+    "item5": "PHOTO · MATCH PLAY"
+  },
+  "cta": {
+    "title": "Ready for your next hour?",
+    "body": "Write me on Instagram. I usually reply within hours."
+  },
+  "about": {
+    "eyebrow": "About",
+    "photoPlaceholder": "PHOTO · PORTRAIT FLORIAN (PORTRAIT 4:5)",
+    "title": "Florian Molleker.",
+    "subtitle": "C-Trainer for Padel. Player. Learner.",
+    "p1": "I've been playing padel for over two years — started like many: through a friend, a first lesson, and then couldn't stop. Today I'm at Playtomic Level 5 and teach what I've learned through many hours, mistakes, and coaches.",
+    "p2": "As a certified C-Trainer, I work structured: every hour has a focus, each focus builds on the last. No random ball hitting — but a clear red thread that you follow to improve.",
+    "p3": "What's important to me: Honesty about realism. I won't tell you you'll be a pro in four weeks. I'll show you what you can work on today — and in four weeks you'll see the difference yourself.",
+    "facts": "Facts",
+    "cert": "Certification",
+    "certValue": "C-Trainer Padel",
+    "exp": "Experience",
+    "expValue": "2+ Years",
+    "loc": "Locations",
+    "locValue": "Osnabrück, Ibbenbüren",
+    "lang": "Languages",
+    "langValue": "German, English",
+    "ctaTitle": "Ready for your next hour?",
+    "ctaBody": "Write me on Instagram. I usually reply within hours.",
+    "cta1": "Request Hour",
+    "cta2": "Services"
+  },
+  "services": {
+    "eyebrow": "Services & Prices",
+    "title": "Transparent. Per Person. No Package Tricks.",
+    "subtitle": "All prices per person and hour. More players — cheaper per person. Court rental not included.",
+    "included": "What's included",
+    "inc1": "Structured session with clear focus",
+    "inc2": "Video feedback when needed",
+    "inc3": "Training balls provided",
+    "inc4": "Personal feedback after the session",
+    "notIncluded": "Not included",
+    "ni1": "Court rental (paid directly to the venue)",
+    "ni2": "Racket rental (available on request)",
+    "s1": {
+      "title": "Individual Training",
+      "subtitle": "1 Person",
+      "price": "40 €"
+    },
+    "s2": {
+      "title": "Duo",
+      "subtitle": "2 Persons",
+      "price": "20 €"
+    },
+    "s3": {
+      "title": "Small Group",
+      "subtitle": "3-4 Persons",
+      "price": "15 €"
+    },
+    "s4": {
+      "title": "Quartet",
+      "subtitle": "4 Persons",
+      "price": "12.50 €"
+    },
+    "unit": "/ Person · Hour"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Write me.",
+    "subtitle": "The quickest way to reach me is Instagram. Just drop your level, preferred location and weekdays — I usually reply the same day.",
+    "ig": "Instagram",
+    "ighandle": "@fmolleke",
+    "iglabel": "Direct Message",
+    "locations": "Locations",
+    "loc1": "Osnabrück",
+    "loc2": "Ibbenbüren",
+    "locDetail": "Exact venue is agreed after enquiry.",
+    "times": "Availability",
+    "timesDetail": "Mon – Sun, mainly evenings and weekends. Appointments by arrangement."
+  },
+  "impressum": {
+    "eyebrow": "Imprint",
+    "title": "Legal Notice pursuant to § 5 TMG",
+    "contact": "Contact",
+    "name": "Florian Molleker",
+    "placeholder": "Full details will be added shortly.",
+    "disclaimer": {
+      "title": "Liability for Content",
+      "body": "The contents of this website have been prepared with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided."
+    }
+  }
+}

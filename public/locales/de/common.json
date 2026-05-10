@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "services": "Leistungen",
+    "contact": "Kontakt",
+    "book": "Stunde buchen"
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "pages": "Seiten",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "tag": "Padel-Training für alle Levels in Osnabrück und Ibbenbüren.",
+    "based": "Osnabrück / Ibbenbüren",
+    "copy": "© 2026 Florian Molleker",
+    "tagline": "Padel-Training für alle Levels in Osnabrück und Ibbenbüren."
+  },
+  "home": {
+    "eyebrow": "Padel Trainer · Osnabrück & Ibbenbüren",
+    "heroLine1": "Padel Training",
+    "heroLine2": "in Osnabrück.",
+    "heroSub": "Zertifizierter C-Trainer. Vom ersten Schlag bis zum Turnier — strukturiert, ehrlich, mit Spaß.",
+    "cta1": "Stunde anfragen",
+    "cta2": "Über mich",
+    "scroll": "Scroll",
+    "photoAlt": "Florian auf dem Court",
+    "liveTag": "LIVE · ON COURT"
+  },
+  "stats": {
+    "years": "Jahre Padel",
+    "cert": "Zertifizierter Trainer",
+    "locations": "Standorte"
+  },
+  "philo": {
+    "eyebrow": "Methode",
+    "title": "Drei Säulen, ein Ziel: dass du besser spielst.",
+    "1": {
+      "title": "Technik",
+      "body": "Saubere Grundschläge, Bandeja, Vibora, Lob. Kleine Anpassungen mit großem Effekt — gefilmt, gezeigt, korrigiert."
+    },
+    "2": {
+      "title": "Taktik",
+      "body": "Positionsspiel, Druck aufbauen, Druck überstehen. Du lernst zu lesen, was passiert — bevor es passiert."
+    },
+    "3": {
+      "title": "Mindset",
+      "body": "Ruhig bleiben nach Fehlern. Klar kommunizieren mit deinem Partner. Spielen wie ein Team, nicht wie zwei Spieler."
+    }
+  },
+  "audience": {
+    "eyebrow": "Für wen",
+    "title": "Egal wo du stehst — ich holen dich ab.",
+    "1": {
+      "title": "Anfänger",
+      "body": "Erste Schläge, erste Regeln, erste Erfolgserlebnisse. Ohne Druck."
+    },
+    "2": {
+      "title": "Fortgeschrittene",
+      "body": "Du spielst regelmäßig und willst raus aus dem Plateau. Wir finden den Hebel."
+    },
+    "3": {
+      "title": "Turnierspieler",
+      "body": "Match-Vorbereitung, Video-Analyse, gezieltes Training für deine nächste Stufe."
+    }
+  },
+  "gallery": {
+    "eyebrow": "Auf dem Court",
+    "title": "Eindrücke aus dem Training.",
+    "item1": "FOTO · GRUPPENTRAINING",
+    "item2": "FOTO · BANDEJA-DETAIL",
+    "item3": "FOTO · COURT WEITWINKEL",
+    "item4": "FOTO · TECHNIK-COACHING",
+    "item5": "FOTO · MATCH-PLAY"
+  },
+  "cta": {
+    "title": "Bereit für die nächste Stunde?",
+    "body": "Schreib mir per Instagram. Antwort meist innerhalb weniger Stunden."
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "photoPlaceholder": "FOTO · PORTRÄT FLORIAN (HOCH 4:5)",
+    "title": "Florian Molleker.",
+    "subtitle": "C-Trainer für Padel. Spieler. Lerner.",
+    "p1": "Ich spiele seit über zwei Jahren Padel — angefangen wie viele: durch einen Freund, eine erste Stunde, und dann nicht mehr aufgehört. Heute stehe ich auf Playtomic Level 5 und unterrichte das, was ich selbst durch viele Stunden, Fehler und Coaches gelernt habe.",
+    "p2": "Als zertifizierter C-Trainer arbeite ich strukturiert: jede Stunde hat einen Fokus, jeder Fokus baut auf dem letzten auf. Kein zufälliges Bälle-Spielen — sondern ein klarer roter Faden, an dem du dich entlang verbesserst.",
+    "p3": "Was mir wichtig ist: Ehrlichkeit über Realismus. Ich erzähl dir nicht, dass du in vier Wochen Profi bist. Ich zeig dir, woran du heute arbeiten kannst — und in vier Wochen siehst du den Unterschied selbst.",
+    "facts": "Fakten",
+    "cert": "Zertifizierung",
+    "certValue": "C-Trainer Padel",
+    "exp": "Erfahrung",
+    "expValue": "2+ Jahre",
+    "loc": "Standorte",
+    "locValue": "Osnabrück, Ibbenbüren",
+    "lang": "Sprachen",
+    "langValue": "Deutsch, Englisch",
+    "ctaTitle": "Bereit für die nächste Stunde?",
+    "ctaBody": "Schreib mir per Instagram. Antwort meist innerhalb weniger Stunden.",
+    "cta1": "Stunde anfragen",
+    "cta2": "Leistungen"
+  },
+  "services": {
+    "eyebrow": "Leistungen & Preise",
+    "title": "Transparent. Pro Person. Keine Pakete-Tricks.",
+    "subtitle": "Alle Preise pro Person und Stunde. Mehr Spieler — pro Person günstiger. Court-Miete ist nicht enthalten.",
+    "included": "Was enthalten ist",
+    "inc1": "Strukturierte Einheit mit klarem Fokus",
+    "inc2": "Video-Feedback bei Bedarf",
+    "inc3": "Trainings-Bälle stehen bereit",
+    "inc4": "Persönliches Feedback nach der Stunde",
+    "notIncluded": "Nicht enthalten",
+    "ni1": "Court-Miete (zahlst du direkt an die Halle)",
+    "ni2": "Schläger-Verleih (auf Anfrage möglich)",
+    "s1": {
+      "title": "Einzeltraining",
+      "subtitle": "1 Person",
+      "price": "40 €"
+    },
+    "s2": {
+      "title": "Duo",
+      "subtitle": "2 Personen",
+      "price": "20 €"
+    },
+    "s3": {
+      "title": "Kleingruppe",
+      "subtitle": "3-4 Personen",
+      "price": "15 €"
+    },
+    "s4": {
+      "title": "Quartett",
+      "subtitle": "4 Personen",
+      "price": "12,50 €"
+    },
+    "unit": "/ Person · Stunde"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Schreib mir.",
+    "subtitle": "Am schnellsten erreichst du mich auf Instagram. Schreib kurz dein Level, gewünschten Ort und Wochentage — ich melde mich meist am selben Tag.",
+    "ig": "Instagram",
+    "ighandle": "@fmolleke",
+    "iglabel": "Direktnachricht",
+    "locations": "Standorte",
+    "loc1": "Osnabrück",
+    "loc2": "Ibbenbüren",
+    "locDetail": "Genaue Halle wird nach Anfrage abgestimmt.",
+    "times": "Verfügbarkeit",
+    "timesDetail": "Mo – So, vorwiegend abends und am Wochenende. Termine nach Absprache."
+  },
+  "impressum": {
+    "eyebrow": "Impressum",
+    "title": "Angaben gemäß § 5 TMG",
+    "contact": "Kontakt",
+    "name": "Florian Molleker",
+    "placeholder": "Vollständige Angaben werden in Kürze ergänzt.",
+    "disclaimer": {
+      "title": "Haftung für Inhalte",
+      "body": "Die Inhalte dieser Seiten wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden."
+    }
+  }
+}
