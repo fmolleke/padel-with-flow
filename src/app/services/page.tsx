@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'next-i18next';
 import { RevealElement } from '@/hooks/useScrollReveal';
+import { CTASection } from '@/components/sections/CTASection';
 
 export const dynamic = 'force-dynamic';
 
@@ -128,24 +129,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="big-cta">
-        <div className="wrap">
-          <RevealElement id="big-cta">
-            <div className="cta-card">
-              <h2 className="display cta-title">{t('cta.title')}</h2>
-              <p className="body-lg cta-body">{t('cta.body')}</p>
-              <div className="cta-actions">
-                <a className="btn btn-primary" href="/contact">
-                  <span>{t('home.cta1')}</span>
-                  <svg className="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M2 7h10m0 0L8 3m4 4L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </RevealElement>
-        </div>
-      </section>
+      <CTASection />
     </>
   );
 }

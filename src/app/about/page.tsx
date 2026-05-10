@@ -2,8 +2,7 @@
 
 import { useTranslation } from 'next-i18next';
 import { RevealElement } from '@/hooks/useScrollReveal';
-import { Button } from '@/components/Button';
-import ArrowIcon from '@/components/icons/ArrowIcon';
+import { CTASection } from '@/components/sections/CTASection';
 
 export const dynamic = 'force-dynamic';
 
@@ -101,26 +100,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Big CTA Section */}
-      <section className="big-cta">
-        <div className="wrap">
-          <RevealElement id="about-cta">
-            <div className="cta-card">
-              <h2 className="display cta-title">{t('cta.title')}</h2>
-              <p className="body-lg cta-body">{t('cta.body')}</p>
-              <div className="cta-actions">
-                <Button href="/contact" variant="primary">
-                  <span>{t('home.cta1')}</span>
-                  <ArrowIcon />
-                </Button>
-                <Button href="/services" variant="ghost">
-                  <span>{t('about.cta2')}</span>
-                </Button>
-              </div>
-            </div>
-          </RevealElement>
-        </div>
-      </section>
+      <CTASection />
 
       <style>{`
         .facts-list {
