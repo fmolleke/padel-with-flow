@@ -40,6 +40,12 @@ export function Footer() {
           <div>
             <h4 className="font-mono text-xs tracking-widest font-medium text-fg-muted uppercase mb-4">{t('footer.contact')}</h4>
             <div className="flex flex-col gap-2 text-sm">
+              <a href="https://wa.me/491733910266" target="_blank" rel="noopener noreferrer" className="text-fg hover:text-accent transition-colors">
+                WhatsApp · +49 173 3910266
+              </a>
+              <a href="https://app.playtomic.io/profile/user/5473961" target="_blank" rel="noopener noreferrer" className="text-fg hover:text-accent transition-colors">
+                Playtomic
+              </a>
               <a href="https://instagram.com/fmolleke" target="_blank" rel="noopener noreferrer" className="text-fg hover:text-accent transition-colors">
                 Instagram · @fmolleke
               </a>

@@ -27,8 +27,8 @@ export default function Contact() {
         <div className="wrap">
           <div className="contact-grid">
 
-            {/* Instagram — primary card, spans 2 rows */}
-            <RevealElement id="contact-ig" className="contact-ig-wrapper">
+            {/* Instagram — primary card */}
+            <RevealElement id="contact-ig">
               <a
                 className="contact-card primary"
                 href="https://instagram.com/fmolleke"
@@ -51,8 +51,56 @@ export default function Contact() {
               </a>
             </RevealElement>
 
+            {/* WhatsApp card */}
+            <RevealElement id="contact-wa" delay={1}>
+              <a
+                className="contact-card whatsapp"
+                href="https://wa.me/491733910266"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="contact-card-head">
+                  <span className="eyebrow" style={{ color: 'inherit', opacity: 0.7 }}>{t('contact.wa')}</span>
+                  <svg className="contact-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="contact-handle display">+49 173 3910266</div>
+                <div className="contact-meta">{t('contact.walabel')}</div>
+                <svg className="wa-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+                  <path d="M3 21l1.6-5A9 9 0 1 1 8 19.4L3 21z" />
+                  <path d="M8.5 9c0 3 2.5 5.5 5.5 5.5l1.5-1.5 2 1v1.5a2 2 0 0 1-2 2A8 8 0 0 1 7.5 9.5a2 2 0 0 1 2-2H11l1 2L10.5 11" />
+                </svg>
+              </a>
+            </RevealElement>
+
+            {/* Playtomic — secondary card */}
+            <RevealElement id="contact-pt" delay={2}>
+              <a
+                className="contact-card secondary"
+                href="https://app.playtomic.io/profile/user/5473961"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="contact-card-head">
+                  <span className="eyebrow" style={{ color: 'inherit', opacity: 0.7 }}>{t('contact.pt')}</span>
+                  <svg className="contact-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M5 15L15 5M15 5H7M15 5V13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div className="contact-handle display">{t('contact.pthandle')}</div>
+                <div className="contact-meta">{t('contact.ptlabel')}</div>
+                <svg className="pt-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" aria-hidden="true">
+                  <path d="M4 5h16v11a2 2 0 0 1-2 2h-7l-4 3v-3H6a2 2 0 0 1-2-2V5z" />
+                  <circle cx="9" cy="11" r="1" fill="currentColor" />
+                  <circle cx="12" cy="11" r="1" fill="currentColor" />
+                  <circle cx="15" cy="11" r="1" fill="currentColor" />
+                </svg>
+              </a>
+            </RevealElement>
+
             {/* Locations */}
-            <RevealElement id="contact-locations" delay={1}>
+            <RevealElement id="contact-locations" delay={3}>
               <div className="contact-card">
                 <div className="eyebrow">{t('contact.locations')}</div>
                 <ul className="loc-list">
@@ -64,7 +112,7 @@ export default function Contact() {
             </RevealElement>
 
             {/* Availability */}
-            <RevealElement id="contact-times" delay={2}>
+            <RevealElement id="contact-times" delay={4}>
               <div className="contact-card">
                 <div className="eyebrow">{t('contact.times')}</div>
                 <div className="schedule">
