@@ -148,6 +148,13 @@
     "times": "Verfügbarkeit",
     "timesDetail": "Mo – So, vorwiegend abends und am Wochenende. Termine nach Absprache."
   },
+  "nf": {
+    "eyebrow": "Aus dem Court geschlagen",
+    "title": "Diese Seite existiert nicht.",
+    "sub": "Vielleicht ein Tippfehler, vielleicht ein alter Link. Zurück auf den Court — wir spielen weiter.",
+    "cta1": "Zur Startseite",
+    "also": "Oder direkt:"
+  },
   "impressum": {
     "eyebrow": "Impressum",
     "title": "Angaben gemäß § 5 TMG",

@@ -148,6 +148,13 @@
     "times": "Availability",
     "timesDetail": "Mon – Sun, mainly evenings and weekends. Appointments by arrangement."
   },
+  "nf": {
+    "eyebrow": "Hit out of court",
+    "title": "This page doesn't exist.",
+    "sub": "Maybe a typo, maybe an old link. Back on court — let's keep playing.",
+    "cta1": "Back to home",
+    "also": "Or jump to:"
+  },
   "impressum": {
     "eyebrow": "Imprint",
     "title": "Legal Notice pursuant to § 5 TMG",
