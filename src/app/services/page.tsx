@@ -129,6 +129,32 @@ export default function Services() {
         </div>
       </section>
 
+      <section className="process">
+        <div className="wrap">
+          <div className="process-head reveal">
+            <RevealElement id="process-eyebrow">
+              <div className="eyebrow">{t('services.process.eyebrow')}</div>
+            </RevealElement>
+            <RevealElement id="process-title" delay={1}>
+              <h2 className="display process-title">{t('services.process.title')}</h2>
+            </RevealElement>
+          </div>
+          <ol className="process-list">
+            {[1, 2, 3, 4, 5].map((n, i) => (
+              <RevealElement key={n} id={`process-step-${n}`} delay={i}>
+                <li className="process-step">
+                  <div className="step-num">{String(n).padStart(2, '0')}</div>
+                  <div className="step-body">
+                    <h3 className="display step-title">{t(`services.process.${n}.title`)}</h3>
+                    <p className="step-text">{t(`services.process.${n}.body`)}</p>
+                  </div>
+                </li>
+              </RevealElement>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <CTASection />
     </>
   );

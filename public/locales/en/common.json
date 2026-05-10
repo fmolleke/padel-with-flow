@@ -132,7 +132,31 @@
       "subtitle": "4 Persons",
       "price": "12.50 €"
     },
-    "unit": "/ Person · Hour"
+    "unit": "/ Person · Hour",
+    "process": {
+      "eyebrow": "How It Works",
+      "title": "How it goes — from your first message to the last ball.",
+      "1": {
+        "title": "Tell me who's coming",
+        "body": "Tell me how many people you'd like to train with — alone, in pairs, as a trio, or as a quartet."
+      },
+      "2": {
+        "title": "We find a date",
+        "body": "Together we find a time that works for you (and your fellow players)."
+      },
+      "3": {
+        "title": "You book the court",
+        "body": "You book and pay for the court directly with the venue — so you keep full control over time and location."
+      },
+      "4": {
+        "title": "We train",
+        "body": "On the agreed date we meet on the court. I'll bring the balls — you bring yourself."
+      },
+      "5": {
+        "title": "Your topic, your focus",
+        "body": "Have something specific in mind — bandeja, return of serve, court position? Let me know, and I'll focus the entire session on exactly that."
+      }
+    }
   },
   "contact": {
     "eyebrow": "Contact",

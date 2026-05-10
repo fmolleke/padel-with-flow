@@ -132,7 +132,31 @@
       "subtitle": "4 Personen",
       "price": "12,50 €"
     },
-    "unit": "/ Person · Stunde"
+    "unit": "/ Person · Stunde",
+    "process": {
+      "eyebrow": "Ablauf",
+      "title": "So läuft's ab — von der Anfrage bis zum letzten Ball.",
+      "1": {
+        "title": "Sag mir, wer mitkommt",
+        "body": "Du sagst mir, mit wie vielen Personen du trainieren möchtest — alleine, zu zweit, zu dritt oder zu viert."
+      },
+      "2": {
+        "title": "Wir finden einen Termin",
+        "body": "Gemeinsam stimmen wir einen Termin ab, der für dich (und deine Mitspieler) passt."
+      },
+      "3": {
+        "title": "Du buchst den Court",
+        "body": "Du buchst und bezahlst den Court direkt bei der Halle — so behältst du die volle Kontrolle über Zeit und Ort."
+      },
+      "4": {
+        "title": "Wir trainieren",
+        "body": "Am vereinbarten Termin treffen wir uns auf dem Court. Bälle bringe ich mit — du bringst dich."
+      },
+      "5": {
+        "title": "Dein Thema, dein Fokus",
+        "body": "Hast du ein bestimmtes Thema im Kopf — Bandeja, Aufschlag-Return, Court-Position? Sag mir Bescheid, dann lege ich den Fokus der Einheit genau darauf."
+      }
+    }
   },
   "contact": {
     "eyebrow": "Kontakt",

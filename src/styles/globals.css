@@ -184,6 +184,43 @@ button {
   border: 1px solid var(--line-soft);
 }
 
+/* ======= PROCESS SECTION ======= */
+.process { padding: 40px 0 100px; }
+.process-head { max-width: 820px; margin-bottom: 64px; }
+.process-head .eyebrow { margin-bottom: 24px; }
+.process-title { font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.02em; line-height: 1.05; }
+.process-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--line-soft);
+  padding: 0;
+  margin: 0;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 48px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: start;
+  transition: padding-left 0.4s var(--ease);
+}
+.process-step:hover { padding-left: 12px; }
+@media (max-width: 720px) {
+  .process-step { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+  .process-step:hover { padding-left: 0; }
+}
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  color: var(--fg-muted);
+  padding-top: 8px;
+}
+.step-title { font-size: clamp(22px, 2.4vw, 28px); margin-bottom: 10px; letter-spacing: -0.01em; }
+.step-text { font-size: 17px; line-height: 1.55; color: var(--fg-muted); }
+
 /* Price Card Quartett - Dark Mode */
 [data-theme='dark'] .price-card.highlight .price-num,
 [data-theme='dark'] .price-card.highlight .price-sub,
