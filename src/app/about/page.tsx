@@ -123,23 +123,6 @@ export default function About() {
       </section>
 
       <style>{`
-        .story-text p:first-child::first-letter {
-          font-family: var(--font-display);
-          font-size: 88px;
-          float: left;
-          line-height: 0.85;
-          margin: 8px 12px 0 -4px;
-          color: var(--accent);
-          font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-          .story-text p:first-child::first-letter {
-            font-size: 56px;
-            margin: 4px 10px 0 0;
-          }
-        }
-
         .facts-list {
           display: flex;
           flex-direction: column;
