@@ -3,16 +3,13 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact",
-    "book": "Book Hour"
+    "contact": "Contact"
   },
   "footer": {
     "contact": "Contact",
     "pages": "Pages",
     "legal": "Legal",
     "imprint": "Imprint",
-    "privacy": "Privacy",
-    "tag": "Padel training for all levels in Osnabrück and Ibbenbüren.",
     "based": "Osnabrück / Ibbenbüren",
     "copy": "© 2026 Florian Molleker",
     "tagline": "Padel training for all levels in Osnabrück and Ibbenbüren."
@@ -24,14 +21,8 @@
     "heroSub": "Certified C-Trainer. From your first shot to tournament play — structured, honest, and fun.",
     "cta1": "Request Hour",
     "cta2": "About Me",
-    "scroll": "Scroll",
     "photoAlt": "Florian on the court",
     "liveTag": "LIVE · ON COURT"
-  },
-  "stats": {
-    "years": "Years Padel",
-    "cert": "Certified Trainer",
-    "locations": "Locations"
   },
   "philo": {
     "eyebrow": "Method",
@@ -95,10 +86,6 @@
     "locValue": "Osnabrück, Ibbenbüren",
     "lang": "Languages",
     "langValue": "German, English",
-    "ctaTitle": "Ready for your next hour?",
-    "ctaBody": "Write me on Instagram. I usually reply within hours.",
-    "cta1": "Request Hour",
-    "cta2": "Services",
     "certSection": {
       "eyebrow": "Licence · Verified",
       "title": "DPV C-Trainer Licence.",
@@ -183,9 +170,7 @@
     "locations": "Locations",
     "loc1": "Osnabrück",
     "loc2": "Ibbenbüren",
-    "locDetail": "Exact venue is agreed after enquiry.",
-    "times": "Availability",
-    "timesDetail": "Mon – Sun, mainly evenings and weekends. Appointments by arrangement."
+    "locDetail": "Exact venue is agreed after enquiry."
   },
   "nf": {
     "eyebrow": "Hit out of court",

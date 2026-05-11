@@ -3,16 +3,13 @@
     "home": "Start",
     "about": "Über mich",
     "services": "Leistungen",
-    "contact": "Kontakt",
-    "book": "Stunde buchen"
+    "contact": "Kontakt"
   },
   "footer": {
     "contact": "Kontakt",
     "pages": "Seiten",
     "legal": "Rechtliches",
     "imprint": "Impressum",
-    "privacy": "Datenschutz",
-    "tag": "Padel-Training für alle Levels in Osnabrück und Ibbenbüren.",
     "based": "Osnabrück / Ibbenbüren",
     "copy": "© 2026 Florian Molleker",
     "tagline": "Padel-Training für alle Levels in Osnabrück und Ibbenbüren."
@@ -24,14 +21,8 @@
     "heroSub": "Zertifizierter C-Trainer. Vom ersten Schlag bis zum Turnier — strukturiert, ehrlich, mit Spaß.",
     "cta1": "Stunde anfragen",
     "cta2": "Über mich",
-    "scroll": "Scroll",
     "photoAlt": "Florian auf dem Court",
     "liveTag": "LIVE · ON COURT"
-  },
-  "stats": {
-    "years": "Jahre Padel",
-    "cert": "Zertifizierter Trainer",
-    "locations": "Standorte"
   },
   "philo": {
     "eyebrow": "Methode",
@@ -95,10 +86,6 @@
     "locValue": "Osnabrück, Ibbenbüren",
     "lang": "Sprachen",
     "langValue": "Deutsch, Englisch",
-    "ctaTitle": "Bereit für die nächste Stunde?",
-    "ctaBody": "Schreib mir per Instagram. Antwort meist innerhalb weniger Stunden.",
-    "cta1": "Stunde anfragen",
-    "cta2": "Leistungen",
     "certSection": {
       "eyebrow": "Lizenz · Verifiziert",
       "title": "DPV C-Trainer Lizenz.",
@@ -183,9 +170,7 @@
     "locations": "Standorte",
     "loc1": "Osnabrück",
     "loc2": "Ibbenbüren",
-    "locDetail": "Genaue Halle wird nach Anfrage abgestimmt.",
-    "times": "Verfügbarkeit",
-    "timesDetail": "Mo – So, vorwiegend abends und am Wochenende. Termine nach Absprache."
+    "locDetail": "Genaue Halle wird nach Anfrage abgestimmt."
   },
   "nf": {
     "eyebrow": "Aus dem Court geschlagen",
