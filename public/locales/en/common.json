@@ -20,7 +20,7 @@
   "home": {
     "eyebrow": "Padel Coach · Osnabrück & Ibbenbüren",
     "heroLine1": "Padel Training",
-    "heroLine2": "in Osnabrück.",
+    "heroLine2": "in Osnabrück & Ibbenbüren.",
     "heroSub": "Certified C-Trainer. From your first shot to tournament play — structured, honest, and fun.",
     "cta1": "Request Hour",
     "cta2": "About Me",
@@ -76,7 +76,7 @@
   },
   "cta": {
     "title": "Ready for your next hour?",
-    "body": "Write me on WhatsApp, Playtomic, or Instagram. I usually reply within hours."
+    "body": "Write me on Instagram or Playtomic. I usually reply within hours."
   },
   "about": {
     "eyebrow": "About",
@@ -161,12 +161,10 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Write me.",
-    "subtitle": "The quickest way to reach me is WhatsApp, Instagram, or the in-app chat on Playtomic. Just drop your level, preferred location and weekdays — I usually reply the same day.",
+    "subtitle": "The quickest way to reach me is Instagram or the in-app chat on Playtomic. Just drop your level, preferred location and weekdays — I usually reply the same day.",
     "ig": "Instagram",
-    "ighandle": "@fmolleke",
+    "ighandle": "@padelwithflow",
     "iglabel": "Direct Message",
-    "wa": "WhatsApp · Phone",
-    "walabel": "WhatsApp chat · Call",
     "pt": "Playtomic",
     "pthandle": "In-App Chat",
     "ptlabel": "Open profile · Send message",

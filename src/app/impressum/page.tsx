@@ -30,8 +30,8 @@ export default function Impressum() {
                   <p><strong>{t('impressum.name')}</strong></p>
                   <p>{t('impressum.placeholder')}</p>
                   <p style={{ marginTop: '12px' }}>
-                    <a href="https://instagram.com/fmolleke" target="_blank" rel="noopener noreferrer">
-                      Instagram · @fmolleke
+                    <a href="https://instagram.com/padelwithflow" target="_blank" rel="noopener noreferrer">
+                      Instagram · @padelwithflow
                     </a>
                   </p>
                 </div>

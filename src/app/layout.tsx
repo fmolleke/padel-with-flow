@@ -50,7 +50,7 @@ const jsonLd = {
   name: 'Padel Training Florian Molleker',
   description: 'Zertifizierter C-Trainer für Padel in Osnabrück und Ibbenbüren.',
   url: BASE_URL,
-  sameAs: ['https://instagram.com/fmolleke'],
+  sameAs: ['https://instagram.com/padelwithflow'],
   address: [
     {
       '@type': 'PostalAddress',

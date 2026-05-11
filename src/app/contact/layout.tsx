@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 export const metadata: Metadata = {
   title: 'Kontakt',
   description:
-    'Padel-Stunde anfragen in Osnabrück oder Ibbenbüren. Schreib Florian Molleker auf Instagram @fmolleke — Antwort meist am selben Tag.',
+    'Padel-Stunde anfragen in Osnabrück oder Ibbenbüren. Schreib Florian Molleker auf Instagram @padelwithflow — Antwort meist am selben Tag.',
   keywords: [
     'Padel Trainer Kontakt Osnabrück',
     'Padel Stunde anfragen',
