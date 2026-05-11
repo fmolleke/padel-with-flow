@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/Button';
 import ArrowIcon from '@/components/icons/ArrowIcon';
-import oncourt from '../../assets/oncourt.jpg';
 
 export function HeroSection() {
   const { t } = useTranslation('common');
@@ -79,7 +78,7 @@ export function HeroSection() {
         <div className="hero-photo">
           <div className="photo hero-photo-frame">
             <Image
-              src={oncourt}
+              src="/assets/oncourt.jpg"
               alt={t('home.photoAlt')}
               fill
               className="object-cover"

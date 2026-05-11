@@ -98,7 +98,19 @@
     "ctaTitle": "Ready for your next hour?",
     "ctaBody": "Write me on Instagram. I usually reply within hours.",
     "cta1": "Request Hour",
-    "cta2": "Services"
+    "cta2": "Services",
+    "certSection": {
+      "eyebrow": "Licence · Verified",
+      "title": "DPV C-Trainer Licence.",
+      "body": "Issued by the German Padel Association on 17.02.2026. The official coaching licence for structured padel coaching in Germany.",
+      "f1k": "Issuer",
+      "f1v": "German Padel Association (DPV)",
+      "f2k": "Licence Level",
+      "f2v": "C-Trainer Padel",
+      "f3k": "Issued on",
+      "f3v": "17.02.2026",
+      "view": "View original"
+    }
   },
   "services": {
     "eyebrow": "Services & Prices",

@@ -98,7 +98,19 @@
     "ctaTitle": "Bereit für die nächste Stunde?",
     "ctaBody": "Schreib mir per Instagram. Antwort meist innerhalb weniger Stunden.",
     "cta1": "Stunde anfragen",
-    "cta2": "Leistungen"
+    "cta2": "Leistungen",
+    "certSection": {
+      "eyebrow": "Lizenz · Verifiziert",
+      "title": "DPV C-Trainer Lizenz.",
+      "body": "Ausgestellt vom Deutschen Padel Verband am 17.02.2026. Die offizielle Trainerlizenz für strukturiertes Padel-Coaching in Deutschland.",
+      "f1k": "Aussteller",
+      "f1v": "Deutscher Padel Verband (DPV)",
+      "f2k": "Lizenzstufe",
+      "f2v": "C-Trainer Padel",
+      "f3k": "Ausgestellt am",
+      "f3v": "17.02.2026",
+      "view": "Original ansehen"
+    }
   },
   "services": {
     "eyebrow": "Leistungen & Preise",
