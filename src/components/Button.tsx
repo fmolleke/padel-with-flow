@@ -1,3 +1,5 @@
+import { Link } from '@/i18n/navigation';
+
 interface ButtonProps {
   href?: string;
   target?: string;
@@ -10,17 +12,22 @@ interface ButtonProps {
 
 export function Button({ href, target, rel, onClick, children, variant = 'primary', className = '' }: ButtonProps) {
   const baseClasses = 'btn';
-  const primaryClasses = 'btn-primary';
-  const ghostClasses = 'btn-ghost';
-  const variantClasses = variant === 'primary' ? primaryClasses : ghostClasses;
-
+  const variantClasses = variant === 'primary' ? 'btn-primary' : 'btn-ghost';
   const classes = `${baseClasses} ${variantClasses} ${className}`;
 
   if (href) {
+    const isExternal = href.startsWith('http') || href.startsWith('//');
+    if (isExternal) {
+      return (
+        <a href={href} target={target} rel={rel} className={classes}>
+          {children}
+        </a>
+      );
+    }
     return (
-      <a href={href} target={target} rel={rel} className={classes}>
+      <Link href={href as Parameters<typeof Link>[0]['href']} className={classes}>
         {children}
-      </a>
+      </Link>
     );
   }
 

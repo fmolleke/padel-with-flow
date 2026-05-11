@@ -1,18 +1,18 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { useScrollReveal, RevealElement } from '@/hooks/useScrollReveal';
 
 export function GallerySection() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   const revealed = useScrollReveal();
 
   const galleryItems = [
-    { id: 'gi-1', labelKey: 'gallery.item1' },
-    { id: 'gi-2', labelKey: 'gallery.item2' },
-    { id: 'gi-3', labelKey: 'gallery.item3' },
-    { id: 'gi-4', labelKey: 'gallery.item4' },
-    { id: 'gi-5', labelKey: 'gallery.item5' },
+    { id: 'gi-1', labelKey: 'gallery.item1' as const },
+    { id: 'gi-2', labelKey: 'gallery.item2' as const },
+    { id: 'gi-3', labelKey: 'gallery.item3' as const },
+    { id: 'gi-4', labelKey: 'gallery.item4' as const },
+    { id: 'gi-5', labelKey: 'gallery.item5' as const },
   ];
 
   return (

@@ -1,13 +1,13 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/Button';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 
 export function HeroSection() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <section className="hero">
       {/* Background SVG */}

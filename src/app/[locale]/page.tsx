@@ -6,8 +6,6 @@ import { AudienceSection } from '@/components/sections/AudienceSection';
 import { GallerySection } from '@/components/sections/GallerySection';
 import { CTASection } from '@/components/sections/CTASection';
 
-export const dynamic = 'force-dynamic';
-
 export default function Home() {
   return (
     <>

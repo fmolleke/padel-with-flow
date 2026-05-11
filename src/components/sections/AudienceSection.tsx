@@ -1,10 +1,10 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 
 export function AudienceSection() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
 
   const audiences = [
     { key: '1', num: 'A', tag: 'START', title: t('audience.1.title'), body: t('audience.1.body') },

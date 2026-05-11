@@ -1,12 +1,10 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 
-export const dynamic = 'force-dynamic';
-
 export default function Contact() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <>
       <section className="page-head">

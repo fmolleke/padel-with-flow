@@ -1,13 +1,11 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { CTASection } from '@/components/sections/CTASection';
 
-export const dynamic = 'force-dynamic';
-
 export default function About() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <>
 

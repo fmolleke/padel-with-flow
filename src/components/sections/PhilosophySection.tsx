@@ -1,10 +1,10 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 
 export function PhilosophySection() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
 
   const pillars = [
     { num: '01', title: t('philo.1.title'), body: t('philo.1.body') },

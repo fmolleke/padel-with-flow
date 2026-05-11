@@ -1,10 +1,10 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 export function Footer() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <footer className="border-t border-line-soft mt-10 pt-10 pb-8 px-5 md:px-8 md:mt-[60px] md:pt-[60px] md:pb-10">
       <div className="max-w-7xl mx-auto">

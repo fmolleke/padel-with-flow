@@ -1,13 +1,12 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { CTASection } from '@/components/sections/CTASection';
 
-export const dynamic = 'force-dynamic';
-
 export default function Services() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <>
       <section className="page-head">
@@ -36,12 +35,12 @@ export default function Services() {
                   <span className="price-value display">{t('services.s1.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
                 </div>
-                <a className="price-cta" href="/contact">
+                <Link className="price-cta" href="/contact">
                   <span>{t('home.cta1')}</span>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10m0 0L8 3m4 4L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
-                </a>
+                </Link>
               </article>
             </RevealElement>
 
@@ -54,12 +53,12 @@ export default function Services() {
                   <span className="price-value display">{t('services.s2.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
                 </div>
-                <a className="price-cta" href="/contact">
+                <Link className="price-cta" href="/contact">
                   <span>{t('home.cta1')}</span>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10m0 0L8 3m4 4L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
-                </a>
+                </Link>
               </article>
             </RevealElement>
 
@@ -72,12 +71,12 @@ export default function Services() {
                   <span className="price-value display">{t('services.s3.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
                 </div>
-                <a className="price-cta" href="/contact">
+                <Link className="price-cta" href="/contact">
                   <span>{t('home.cta1')}</span>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10m0 0L8 3m4 4L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
-                </a>
+                </Link>
               </article>
             </RevealElement>
 
@@ -90,12 +89,12 @@ export default function Services() {
                   <span className="price-value display">{t('services.s4.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
                 </div>
-                <a className="price-cta" href="/contact">
+                <Link className="price-cta" href="/contact">
                   <span>{t('home.cta1')}</span>
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10m0 0L8 3m4 4L8 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                   </svg>
-                </a>
+                </Link>
               </article>
             </RevealElement>
           </div>
@@ -140,13 +139,13 @@ export default function Services() {
             </RevealElement>
           </div>
           <ol className="process-list">
-            {[1, 2, 3, 4, 5].map((n, i) => (
+            {([1, 2, 3, 4, 5] as const).map((n, i) => (
               <RevealElement key={n} id={`process-step-${n}`} delay={i}>
                 <li className="process-step">
                   <div className="step-num">{String(n).padStart(2, '0')}</div>
                   <div className="step-body">
-                    <h3 className="display step-title">{t(`services.process.${n}.title`)}</h3>
-                    <p className="step-text">{t(`services.process.${n}.body`)}</p>
+                    <h3 className="display step-title">{t(`services.process.${n}.title` as Parameters<typeof t>[0])}</h3>
+                    <p className="step-text">{t(`services.process.${n}.body` as Parameters<typeof t>[0])}</p>
                   </div>
                 </li>
               </RevealElement>

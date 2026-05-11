@@ -1,11 +1,11 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/Button';
 
 export function CTASection() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <section className="big-cta">
       <div className="wrap">

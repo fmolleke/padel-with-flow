@@ -1,11 +1,11 @@
 'use client';
 
-import { useTranslation } from 'next-i18next';
+import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { Button } from '@/components/Button';
 
 export default function NotFound() {
-  const { t } = useTranslation('common');
+  const t = useTranslations();
   return (
     <>
       <section
@@ -88,11 +88,11 @@ export default function NotFound() {
 
               <div className="nf-links">
                 <span className="eyebrow nf-also">{t('nf.also')}</span>
-                <a href="/about">{t('nav.about')}</a>
+                <Button href="/about" variant="ghost">{t('nav.about')}</Button>
                 <span className="nf-dot">·</span>
-                <a href="/services">{t('nav.services')}</a>
+                <Button href="/services" variant="ghost">{t('nav.services')}</Button>
                 <span className="nf-dot">·</span>
-                <a href="/contact">{t('nav.contact')}</a>
+                <Button href="/contact" variant="ghost">{t('nav.contact')}</Button>
               </div>
             </RevealElement>
           </div>

@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Navigation } from '@/components/Navigation';
+import { Navigation } from './Navigation';
 
-export function ClientNavigation() {
+export function NavigationWrapper() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

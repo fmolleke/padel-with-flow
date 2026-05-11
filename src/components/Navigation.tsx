@@ -1,32 +1,30 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useTheme } from '@/context/ThemeContext';
 
 export function Navigation() {
-  const { t, i18n } = useTranslation('common');
+  const t = useTranslations();
+  const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const currentPath = pathname || '/';
-
   const toggleLanguage = () => {
-    const nextLocale = i18n.language === 'de' ? 'en' : 'de';
-    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/`;
-    i18n.changeLanguage(nextLocale);
+    const nextLocale = locale === 'de' ? 'en' : 'de';
+    router.replace(pathname, { locale: nextLocale });
   };
 
-  const isActive = (path: string) => currentPath === path;
+  const isActive = (path: string) => pathname === path;
 
   const navLinks = [
-    { href: '/', label: t('nav.home') },
-    { href: '/about', label: t('nav.about') },
-    { href: '/services', label: t('nav.services') },
-    { href: '/contact', label: t('nav.contact') },
+    { href: '/' as const, label: t('nav.home') },
+    { href: '/about' as const, label: t('nav.about') },
+    { href: '/services' as const, label: t('nav.services') },
+    { href: '/contact' as const, label: t('nav.contact') },
   ];
 
   return (
@@ -59,9 +57,9 @@ export function Navigation() {
                 className="px-2.5 h-[34px] text-xs font-medium tracking-wider rounded transition-all hover:bg-bg-muted"
                 aria-label="Toggle language"
               >
-                <span style={{ color: 'var(--fg)' }}>{i18n.language?.toUpperCase() || 'DE'}</span>
+                <span style={{ color: 'var(--fg)' }}>{locale.toUpperCase()}</span>
                 <span className="opacity-40 mx-1">/</span>
-                <span style={{ color: 'var(--fg-muted)' }}>{i18n.language === 'de' ? 'EN' : 'DE'}</span>
+                <span style={{ color: 'var(--fg-muted)' }}>{locale === 'de' ? 'EN' : 'DE'}</span>
               </button>
               <button
                 onClick={toggleTheme}
@@ -123,9 +121,9 @@ export function Navigation() {
                 className="px-3 py-2 text-xs font-medium tracking-wider rounded transition-all hover:bg-bg-muted"
                 aria-label="Toggle language"
               >
-                <span style={{ color: 'var(--fg)' }}>{i18n.language?.toUpperCase() || 'DE'}</span>
+                <span style={{ color: 'var(--fg)' }}>{locale.toUpperCase()}</span>
                 <span className="opacity-40 mx-1">/</span>
-                <span style={{ color: 'var(--fg-muted)' }}>{i18n.language === 'de' ? 'EN' : 'DE'}</span>
+                <span style={{ color: 'var(--fg-muted)' }}>{locale === 'de' ? 'EN' : 'DE'}</span>
               </button>
             </div>
           </div>
