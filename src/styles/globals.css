@@ -471,7 +471,9 @@ section { padding: 120px 0; position: relative; }
 .page-subtitle { max-width: 640px; }
 
 .prices { padding-top: 60px; }
-.price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.price-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+.price-grid > * { height: 100%; }
+.price-grid .price-card { height: 100%; box-sizing: border-box; }
 @media (max-width: 1080px) { .price-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .price-grid { grid-template-columns: 1fr; } }
 .price-card {
