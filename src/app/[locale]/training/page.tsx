@@ -3,6 +3,7 @@ import { supabase, TrainingSlot } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
+import { RevealElement } from '@/hooks/useScrollReveal';
 
 async function getSlots() {
   const { data } = await supabase
@@ -28,27 +29,41 @@ export default async function TrainingPage({ params }: { params: Promise<{ local
   const slots = await getSlots();
 
   return (
-    <main className="max-w-4xl mx-auto px-8 py-32">
-      <p className="text-sm font-medium tracking-widest uppercase mb-4" style={{ color: 'var(--accent)' }}>
-        {t('eyebrow')}
-      </p>
-      <h1 className="font-display text-4xl font-semibold mb-4">{t('title')}</h1>
-      <p className="text-base leading-relaxed mb-12" style={{ color: 'var(--fg-muted)' }}>
-        {t('subtitle')}
-      </p>
+    <>
+      <section className="page-head">
+        <div className="wrap">
+          <RevealElement id="training-eyebrow">
+            <div className="eyebrow">{t('eyebrow')}</div>
+          </RevealElement>
+          <RevealElement id="training-title" delay={1}>
+            <h1 className="display page-title">{t('title')}</h1>
+          </RevealElement>
+          <RevealElement id="training-subtitle" delay={2}>
+            <p className="body-lg page-subtitle">{t('subtitle')}</p>
+          </RevealElement>
+        </div>
+      </section>
 
-      {slots.length === 0 ? (
-        <div className="rounded-lg border border-dashed p-12 text-center" style={{ borderColor: 'var(--line-soft)' }}>
-          <p style={{ color: 'var(--fg-muted)' }}>{t('empty')}</p>
+      <section className="training-slots">
+        <div className="wrap">
+          {slots.length === 0 ? (
+            <RevealElement id="training-empty">
+              <div className="rounded-lg border border-dashed p-12 text-center" style={{ borderColor: 'var(--line-soft)' }}>
+                <p style={{ color: 'var(--fg-muted)' }}>{t('empty')}</p>
+              </div>
+            </RevealElement>
+          ) : (
+            <div className="flex flex-col gap-4">
+              {slots.map((slot, i) => (
+                <RevealElement key={slot.id} id={`slot-${slot.id}`} delay={i}>
+                  <SlotCard slot={slot} locale={locale} />
+                </RevealElement>
+              ))}
+            </div>
+          )}
         </div>
-      ) : (
-        <div className="flex flex-col gap-4">
-          {slots.map((slot) => (
-            <SlotCard key={slot.id} slot={slot} locale={locale} />
-          ))}
-        </div>
-      )}
-    </main>
+      </section>
+    </>
   );
 }
 
@@ -59,40 +74,32 @@ async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_regist
   const dateLocale = locale === 'en' ? 'en-GB' : 'de-DE';
 
   return (
-    <Link
-      href={`/training/${slot.id}` as '/training/[id]'}
-      className="block rounded-lg border p-6 transition-all hover:border-accent"
-      style={{ borderColor: 'var(--line-soft)' }}
-    >
-      <div className="flex items-start justify-between gap-4">
+    <Link href={`/training/${slot.id}` as '/training/[id]'} className="slot-card">
+      <div className="slot-card-inner">
+        <div className="slot-date">
+          <span className="slot-day">{date.toLocaleDateString(dateLocale, { day: 'numeric' })}</span>
+          <span className="slot-month">{date.toLocaleDateString(dateLocale, { month: 'short' })}</span>
+        </div>
+
         <div>
-          <p className="font-semibold text-lg mb-1">{slot.title}</p>
-          <p className="text-sm mb-1" style={{ color: 'var(--fg-muted)' }}>
-            {date.toLocaleDateString(dateLocale, { weekday: 'long', day: 'numeric', month: 'long' })}
+          <p className="slot-title">{slot.title}</p>
+          <p className="slot-meta">
+            {date.toLocaleDateString(dateLocale, { weekday: 'long' })}
             {' · '}
             {date.toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{t('clockSuffix')}
             {' · '}{slot.duration_minutes} {t('min')}
+            {' · '}{slot.location}
           </p>
-          <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>{slot.location}</p>
+          {slot.description && <p className="slot-desc">{slot.description}</p>}
         </div>
-        <div className="text-right shrink-0">
-          {slot.price != null && (
-            <p className="font-semibold mb-1">{slot.price} €</p>
-          )}
-          <span
-            className="text-xs font-medium px-2 py-1 rounded"
-            style={{
-              background: isFull ? 'var(--bg-muted)' : 'color-mix(in srgb, var(--accent) 15%, transparent)',
-              color: isFull ? 'var(--fg-muted)' : 'var(--accent)',
-            }}
-          >
+
+        <div className="slot-right">
+          {slot.price != null && <p className="slot-price">{slot.price} €</p>}
+          <span className={isFull ? 'slot-badge slot-badge-full' : 'slot-badge slot-badge-available'}>
             {isFull ? t('full') : t('spots', { count: slot.spots_left })}
           </span>
         </div>
       </div>
-      {slot.description && (
-        <p className="text-sm mt-3" style={{ color: 'var(--fg-muted)' }}>{slot.description}</p>
-      )}
     </Link>
   );
 }

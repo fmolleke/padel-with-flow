@@ -548,6 +548,84 @@ section { padding: 120px 0; position: relative; }
 .contact-card.primary .contact-note,
 .contact-card.secondary .contact-note { color: color-mix(in srgb, currentColor 75%, transparent); }
 
+/* Training page */
+.training-slots { padding-top: 0; padding-bottom: 100px; }
+
+/* Training slot cards */
+.slot-card {
+  display: block;
+  background: var(--bg-elev);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  transition: transform 0.4s var(--ease), border-color 0.3s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.slot-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.slot-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent);
+  transform: scaleY(0); transform-origin: bottom; transition: transform 0.4s var(--ease);
+}
+.slot-card:hover::before { transform: scaleY(1); transform-origin: top; }
+
+.slot-card-inner {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+@media (max-width: 600px) {
+  .slot-card { padding: 24px 20px; }
+  .slot-card-inner { grid-template-columns: 1fr auto; }
+  .slot-date { display: none; }
+}
+
+.slot-date { text-align: center; padding-top: 2px; }
+.slot-day {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--accent);
+}
+.slot-month {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-top: 5px;
+}
+
+.slot-title { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 8px; }
+.slot-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.slot-desc { font-size: 14px; color: var(--fg-muted); line-height: 1.55; margin-top: 12px; text-wrap: pretty; }
+
+.slot-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 2px; }
+.slot-price { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+.slot-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+.slot-badge-available { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
+.slot-badge-full { background: var(--bg-muted); color: var(--fg-muted); }
+
 /* Impressum / Legal page */
 .imprint-title { font-size: clamp(40px, 6vw, 80px); margin: 24px 0; max-width: 900px; }
 .legal { padding: 40px 0 80px; }
