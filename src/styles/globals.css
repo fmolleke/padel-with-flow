@@ -242,6 +242,8 @@ section { padding: 120px 0; position: relative; }
 .btn-primary:hover { transform: translateY(-2px); }
 .btn-ghost { color: var(--fg); border: 1px solid var(--line-soft); }
 .btn-ghost:hover { background: var(--bg-muted); border-color: var(--fg); }
+.btn-destructive { background: #dc2626; color: #fff; }
+.btn-destructive:hover { transform: translateY(-2px); }
 .btn .arrow { transition: transform 0.3s var(--ease); }
 .btn:hover .arrow { transform: translateX(4px); }
 
@@ -550,6 +552,50 @@ section { padding: 120px 0; position: relative; }
 
 /* Training page */
 .training-slots { padding-top: 0; padding-bottom: 100px; }
+
+/* Training detail / registration */
+.training-detail { padding-top: 0; padding-bottom: 100px; }
+.training-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+@media (max-width: 860px) { .training-detail-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+.training-info-card, .training-form-card {
+  background: var(--bg-elev);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+.training-form-card {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 100px;
+}
+@media (max-width: 860px) { .training-form-card { position: static; } }
+
+.training-info-section {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.training-info-section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+
+.training-form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-soft);
+  background: var(--bg);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--fg);
+  transition: border-color 0.2s var(--ease);
+}
+.training-form-input:focus { outline: none; border-color: var(--accent); }
 
 /* Training slot cards */
 .slot-card {

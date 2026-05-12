@@ -16,7 +16,8 @@ export function Navigation() {
 
   const toggleLanguage = () => {
     const nextLocale = locale === 'de' ? 'en' : 'de';
-    router.replace(pathname, { locale: nextLocale });
+    const search = typeof window !== 'undefined' ? window.location.search : '';
+    router.replace(`${pathname}${search}`, { locale: nextLocale });
   };
 
   const isActive = (path: string) => pathname === path;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 
 type SlotInfo = {
   name: string;
@@ -11,7 +11,11 @@ type SlotInfo = {
 };
 
 export default function CancelPage() {
-  const { locale } = useParams<{ locale: string }>();
+  const t = useTranslations('cancel');
+  const locale = useLocale();
+const dateLocale = locale === 'en' ? 'en-GB' : 'de-DE';
+  const clockSuffix = locale === 'en' ? '' : ' Uhr';
+
   const [token, setToken] = useState<string | null>(null);
   const [info, setInfo] = useState<SlotInfo | null>(null);
   const [loading, setLoading] = useState(true);
@@ -20,18 +24,18 @@ export default function CancelPage() {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    const t = new URLSearchParams(window.location.search).get('token');
-    setToken(t);
-    if (!t) { setLoading(false); setError('Kein Token angegeben.'); return; }
+    const tok = new URLSearchParams(window.location.search).get('token');
+    setToken(tok);
+    if (!tok) { setLoading(false); setError(t('errorNoToken')); return; }
 
-    fetch(`/api/cancel?token=${t}`)
+    fetch(`/api/cancel?token=${tok}`)
       .then((r) => r.json())
       .then((data) => {
         if (data.error) setError(data.error);
         else setInfo(data);
         setLoading(false);
       })
-      .catch(() => { setError('Fehler beim Laden.'); setLoading(false); });
+      .catch(() => { setError(t('errorLoad')); setLoading(false); });
   }, []);
 
   async function handleCancel() {
@@ -43,56 +47,94 @@ export default function CancelPage() {
     });
     const data = await res.json();
     setSubmitting(false);
-    if (!res.ok) setError(data.error ?? 'Fehler beim Stornieren.');
+    if (!res.ok) setError(data.error ?? t('errorCancel'));
     else setCancelled(true);
   }
 
-  if (loading) return <main className="max-w-lg mx-auto px-8 py-32"><p>Laden…</p></main>;
+  if (loading) return (
+    <section className="page-head">
+      <div className="wrap">
+        <p style={{ color: 'var(--fg-muted)' }}>{t('loading')}</p>
+      </div>
+    </section>
+  );
 
   return (
-    <main className="max-w-lg mx-auto px-8 py-32">
-      <h1 className="font-display text-3xl font-semibold mb-6">Anmeldung stornieren</h1>
-
-      {error && (
-        <p style={{ color: 'var(--fg-muted)' }}>{error}</p>
-      )}
-
-      {cancelled && (
-        <div className="rounded-lg p-6" style={{ background: 'var(--bg-muted)' }}>
-          <p className="font-semibold mb-1">Stornierung bestätigt.</p>
-          <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>
-            Dein Platz wurde freigegeben. Du erhältst eine Bestätigungs-E-Mail.
-          </p>
-        </div>
-      )}
-
-      {info && !cancelled && (
-        <div>
-          <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-            Hallo <strong>{info.name}</strong>, möchtest du deine Anmeldung für{' '}
-            <strong>{info.slotTitle}</strong> stornieren?
-          </p>
-          <div className="rounded-lg border p-4 mb-6 text-sm" style={{ borderColor: 'var(--line-soft)' }}>
-            <p className="font-medium mb-1">{info.slotTitle}</p>
-            <p style={{ color: 'var(--fg-muted)' }}>
-              {new Date(info.slotDateTime).toLocaleDateString('de-DE', {
-                weekday: 'long', day: 'numeric', month: 'long',
-              })}
+    <>
+      <section className="page-head">
+        <div className="wrap">
+          <div className="eyebrow" style={{ marginBottom: '24px' }}>{t('eyebrow')}</div>
+          <h1 className="display page-title">{t('title')}</h1>
+          {info && (
+            <p className="body-lg page-subtitle">
+              {new Date(info.slotDateTime).toLocaleDateString(dateLocale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
               {' · '}
-              {new Date(info.slotDateTime).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr
+              {new Date(info.slotDateTime).toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{clockSuffix}
             </p>
-            <p style={{ color: 'var(--fg-muted)' }}>{info.slotLocation}</p>
-          </div>
-          <button
-            onClick={handleCancel}
-            disabled={submitting}
-            className="px-6 py-3 rounded font-medium text-sm transition-all"
-            style={{ background: 'var(--bg-muted)', color: 'var(--fg)' }}
-          >
-            {submitting ? 'Wird storniert…' : 'Ja, Anmeldung stornieren'}
-          </button>
+          )}
         </div>
-      )}
-    </main>
+      </section>
+
+      <section className="training-detail">
+        <div className="wrap">
+
+          {!info && error && (
+            <div className="training-info-card" style={{ maxWidth: '560px' }}>
+              <p style={{ color: 'var(--fg-muted)' }}>{error}</p>
+            </div>
+          )}
+
+          {info && (
+            <div className="training-detail-grid">
+
+              <div className="training-info-card">
+                <div className="training-info-section">
+                  <div className="eyebrow" style={{ marginBottom: '8px' }}>{t('labelTraining')}</div>
+                  <p style={{ fontSize: '20px', fontWeight: 600, letterSpacing: '-0.01em' }}>{info.slotTitle}</p>
+                </div>
+                <div className="training-info-section">
+                  <div className="eyebrow" style={{ marginBottom: '8px' }}>{t('labelLocation')}</div>
+                  <p style={{ fontSize: '16px', fontWeight: 500 }}>{info.slotLocation}</p>
+                </div>
+              </div>
+
+              <div className="training-form-card">
+                {cancelled ? (
+                  <>
+                    <div className="eyebrow" style={{ marginBottom: '20px' }}>{t('labelConfirmation')}</div>
+                    <p style={{ fontWeight: 600, fontSize: '18px', marginBottom: '8px' }}>{t('successTitle')}</p>
+                    <p style={{ fontSize: '15px', color: 'var(--fg-muted)', lineHeight: '1.6' }}>{t('successBody')}</p>
+                  </>
+                ) : (
+                  <>
+                    <div className="eyebrow" style={{ marginBottom: '20px' }}>{t('labelConfirmation')}</div>
+                    <p style={{ fontSize: '15px', lineHeight: '1.65', color: 'var(--fg-muted)', marginBottom: '32px' }}>
+                      {t.rich('confirmText', {
+                        name: info.name,
+                        title: info.slotTitle,
+                        b: (chunks) => <strong style={{ color: 'var(--fg)' }}>{chunks}</strong>,
+                      })}
+                    </p>
+                    {error && <p style={{ fontSize: '14px', color: '#dc2626', marginBottom: '16px' }}>{error}</p>}
+                    <div style={{ marginTop: 'auto' }}>
+                      <button
+                        onClick={handleCancel}
+                        disabled={submitting}
+                        className="btn btn-destructive"
+                        style={{ width: '100%', justifyContent: 'center' }}
+                      >
+                        {submitting ? t('submitting') : t('submit')}
+                      </button>
+                    </div>
+                  </>
+                )}
+              </div>
+
+            </div>
+          )}
+
+        </div>
+      </section>
+    </>
   );
 }
