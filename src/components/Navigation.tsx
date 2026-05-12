@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { useTheme } from '@/context/ThemeContext';
+import { features } from '@/lib/features';
 
 export function Navigation() {
   const t = useTranslations();
@@ -24,6 +25,7 @@ export function Navigation() {
     { href: '/' as const, label: t('nav.home') },
     { href: '/about' as const, label: t('nav.about') },
     { href: '/services' as const, label: t('nav.services') },
+    ...(features.trainingBooking ? [{ href: '/training' as const, label: t('nav.training') }] : []),
     { href: '/contact' as const, label: t('nav.contact') },
   ];
 
