@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 
 type SlotInfo = {
   name: string;
@@ -10,6 +11,7 @@ type SlotInfo = {
 };
 
 export default function CancelPage() {
+  const { locale } = useParams<{ locale: string }>();
   const [token, setToken] = useState<string | null>(null);
   const [info, setInfo] = useState<SlotInfo | null>(null);
   const [loading, setLoading] = useState(true);
@@ -37,7 +39,7 @@ export default function CancelPage() {
     const res = await fetch('/api/cancel', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ token }),
+      body: JSON.stringify({ token, locale }),
     });
     const data = await res.json();
     setSubmitting(false);

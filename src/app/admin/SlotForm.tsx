@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export type SlotFormData = {
   title: string;
@@ -23,10 +23,10 @@ export function SlotForm({ initial, onSubmit, submitLabel }: Props) {
   const [title, setTitle] = useState(initial?.title ?? '');
   const [description, setDescription] = useState(initial?.description ?? '');
   const initialDate = initial?.date_time
-    ? new Date(initial.date_time).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', timeZone: 'Europe/Berlin' })
+    ? new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Berlin', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(initial.date_time))
     : '';
   const initialTime = initial?.date_time
-    ? new Date(initial.date_time).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin' })
+    ? new Intl.DateTimeFormat('de-DE', { timeZone: 'Europe/Berlin', hour: '2-digit', minute: '2-digit' }).format(new Date(initial.date_time))
     : '';
   const [date, setDate] = useState(initialDate);
   const [time, setTime] = useState(initialTime);
@@ -36,12 +36,12 @@ export function SlotForm({ initial, onSubmit, submitLabel }: Props) {
   const [price, setPrice] = useState(initial?.price != null ? String(initial.price) : '');
   const [isVisible, setIsVisible] = useState(initial?.is_visible ?? true);
   const [submitting, setSubmitting] = useState(false);
+  const datePickerRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
-    const [day, month, year] = date.split('.');
-    const isoDateTime = new Date(`${year}-${month}-${day}T${time}:00`).toISOString();
+    const isoDateTime = new Date(`${date}T${time}:00`).toISOString();
     await onSubmit({
       title,
       description,
@@ -64,27 +64,51 @@ export function SlotForm({ initial, onSubmit, submitLabel }: Props) {
         <textarea style={{ ...inputStyle, minHeight: '80px', resize: 'vertical' }} value={description} onChange={(e) => setDescription(e.target.value)} />
       </Field>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
-        <Field label="Datum * (TT.MM.JJJJ)">
-          <input
-            type="text"
-            style={inputStyle}
-            required
-            placeholder="15.06.2025"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            pattern="\d{2}\.\d{2}\.\d{4}"
-          />
+        <Field label="Datum *">
+          <div style={{ position: 'relative' }}>
+            <input
+              type="text"
+              readOnly
+              required
+              value={date ? date.split('-').reverse().join('.') : ''}
+              placeholder="TT.MM.JJJJ"
+              style={{ ...inputStyle, cursor: 'pointer' }}
+              onClick={() => datePickerRef.current?.showPicker()}
+            />
+            <input
+              ref={datePickerRef}
+              type="date"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              style={{ position: 'absolute', opacity: 0, pointerEvents: 'none', width: 0, height: 0 }}
+            />
+          </div>
         </Field>
-        <Field label="Uhrzeit * (HH:MM)">
-          <input
-            type="text"
-            style={inputStyle}
-            required
-            placeholder="10:00"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-            pattern="\d{2}:\d{2}"
-          />
+        <Field label="Uhrzeit *">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
+            <select
+              required
+              value={time.split(':')[0] ?? ''}
+              onChange={(e) => setTime(`${e.target.value}:${time.split(':')[1] ?? '00'}`)}
+              style={inputStyle}
+            >
+              <option value="" disabled>HH</option>
+              {Array.from({ length: 24 }, (_, i) => String(i).padStart(2, '0')).map((h) => (
+                <option key={h} value={h}>{h}</option>
+              ))}
+            </select>
+            <select
+              required
+              value={time.split(':')[1] ?? ''}
+              onChange={(e) => setTime(`${time.split(':')[0] ?? '00'}:${e.target.value}`)}
+              style={inputStyle}
+            >
+              <option value="" disabled>MM</option>
+              {['00', '05', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55'].map((m) => (
+                <option key={m} value={m}>{m}</option>
+              ))}
+            </select>
+          </div>
         </Field>
       </div>
       <Field label="Dauer (Minuten) *">

@@ -31,6 +31,7 @@ export async function DELETE(_: Request, { params }: { params: Promise<{ id: str
     name: data.name,
     slotTitle: data.training_slots.title,
     slotDateTime: dateTime,
+    locale: 'de',
   });
 
   return NextResponse.json({ success: true });

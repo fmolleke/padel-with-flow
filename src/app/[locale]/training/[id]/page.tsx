@@ -3,6 +3,7 @@
 import { features } from '@/lib/features';
 import { notFound } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 type Slot = {
   id: string;
@@ -19,6 +20,10 @@ type Slot = {
 
 export default function TrainingDetailPage({ params }: { params: Promise<{ id: string }> }) {
   if (!features.trainingBooking) notFound();
+
+  const t = useTranslations('training');
+  const locale = useLocale();
+  const dateLocale = locale === 'en' ? 'en-GB' : 'de-DE';
 
   const [slot, setSlot] = useState<Slot | null>(null);
   const [loading, setLoading] = useState(true);
@@ -41,13 +46,13 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
   }, [params]);
 
   if (!features.trainingBooking) notFound();
-  if (loading) return <main className="max-w-2xl mx-auto px-8 py-32"><p>Laden…</p></main>;
+  if (loading) return <main className="max-w-2xl mx-auto px-8 py-32"><p>{t('loading')}</p></main>;
   if (!slot || slot.spots_left === undefined) notFound();
 
   const date = new Date(slot.date_time);
   const isFull = slot.spots_left <= 0;
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
     setError('');
@@ -55,7 +60,7 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
     const res = await fetch('/api/registrations', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slot_id: id, name, email, playtomic_level: playtomicLevel || null }),
+      body: JSON.stringify({ slot_id: id, name, email, playtomic_level: playtomicLevel || null, locale }),
     });
 
     const data = await res.json();
@@ -70,15 +75,15 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
 
   return (
     <main className="max-w-2xl mx-auto px-8 py-32">
-      <a href="/training" className="text-sm mb-8 inline-block" style={{ color: 'var(--fg-muted)' }}>
-        ← Alle Termine
+      <a href={`/${locale}/training`} className="text-sm mb-8 inline-block" style={{ color: 'var(--fg-muted)' }}>
+        {t('back')}
       </a>
 
       <h1 className="font-display text-3xl font-semibold mb-2">{slot.title}</h1>
       <p className="text-sm mb-1" style={{ color: 'var(--fg-muted)' }}>
-        {date.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
-        {' · '}{date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr
-        {' · '}{slot.duration_minutes} min
+        {date.toLocaleDateString(dateLocale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}
+        {' · '}{date.toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{t('clockSuffix')}
+        {' · '}{slot.duration_minutes} {t('min')}
       </p>
       <p className="text-sm mb-4" style={{ color: 'var(--fg-muted)' }}>{slot.location}</p>
 
@@ -98,23 +103,21 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
             color: isFull ? 'var(--fg-muted)' : 'var(--accent)',
           }}
         >
-          {isFull ? 'Ausgebucht' : `${slot.spots_left} Platz${slot.spots_left !== 1 ? 'e' : ''} frei`}
+          {isFull ? t('full') : t('spots', { count: slot.spots_left })}
         </span>
       </p>
 
       {success ? (
         <div className="rounded-lg p-6" style={{ background: 'color-mix(in srgb, var(--accent) 10%, transparent)' }}>
-          <p className="font-semibold mb-1">Anmeldung erfolgreich!</p>
-          <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>
-            Du erhältst eine Bestätigungs-E-Mail mit einem Link zur Stornierung.
-          </p>
+          <p className="font-semibold mb-1">{t('successTitle')}</p>
+          <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>{t('successBody')}</p>
         </div>
       ) : isFull ? (
-        <p style={{ color: 'var(--fg-muted)' }}>Dieses Training ist leider ausgebucht.</p>
+        <p style={{ color: 'var(--fg-muted)' }}>{t('fullMessage')}</p>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
-            <label className="block text-sm font-medium mb-1">Name *</label>
+            <label className="block text-sm font-medium mb-1">{t('nameLabel')} *</label>
             <input
               type="text"
               required
@@ -125,7 +128,7 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">E-Mail *</label>
+            <label className="block text-sm font-medium mb-1">{t('emailLabel')} *</label>
             <input
               type="email"
               required
@@ -137,13 +140,13 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
           </div>
           <div>
             <label className="block text-sm font-medium mb-1">
-              Playtomic-Level <span style={{ color: 'var(--fg-muted)' }}>(optional)</span>
+              {t('playtomicLabel')} <span style={{ color: 'var(--fg-muted)' }}>({t('optional')})</span>
             </label>
             <input
               type="text"
               value={playtomicLevel}
               onChange={(e) => setPlaytomicLevel(e.target.value)}
-              placeholder="z.B. 4.5"
+              placeholder={t('playtomicPlaceholder')}
               className="w-full px-3 py-2 rounded border text-sm"
               style={{ borderColor: 'var(--line-soft)', background: 'var(--bg-muted)' }}
             />
@@ -155,7 +158,7 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
             className="px-6 py-3 rounded font-medium text-sm transition-all"
             style={{ background: 'var(--accent)', color: 'var(--bg)' }}
           >
-            {submitting ? 'Wird angemeldet…' : 'Jetzt anmelden'}
+            {submitting ? t('submitting') : t('submit')}
           </button>
         </form>
       )}

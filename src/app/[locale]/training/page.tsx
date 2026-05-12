@@ -2,6 +2,7 @@ import { features } from '@/lib/features';
 import { supabase, TrainingSlot } from '@/lib/supabase';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
+import { getTranslations } from 'next-intl/server';
 
 async function getSlots() {
   const { data } = await supabase
@@ -19,29 +20,31 @@ async function getSlots() {
   });
 }
 
-export default async function TrainingPage() {
+export default async function TrainingPage({ params }: { params: Promise<{ locale: string }> }) {
   if (!features.trainingBooking) notFound();
 
+  const { locale } = await params;
+  const t = await getTranslations('training');
   const slots = await getSlots();
 
   return (
     <main className="max-w-4xl mx-auto px-8 py-32">
       <p className="text-sm font-medium tracking-widest uppercase mb-4" style={{ color: 'var(--accent)' }}>
-        Gruppentraining
+        {t('eyebrow')}
       </p>
-      <h1 className="font-display text-4xl font-semibold mb-4">Fixe Trainingstermine</h1>
+      <h1 className="font-display text-4xl font-semibold mb-4">{t('title')}</h1>
       <p className="text-base leading-relaxed mb-12" style={{ color: 'var(--fg-muted)' }}>
-        Melde dich für einen offenen Trainingstermin an — kein Abo, kein Vertrag.
+        {t('subtitle')}
       </p>
 
       {slots.length === 0 ? (
         <div className="rounded-lg border border-dashed p-12 text-center" style={{ borderColor: 'var(--line-soft)' }}>
-          <p style={{ color: 'var(--fg-muted)' }}>Aktuell sind keine Trainingstermine verfügbar.</p>
+          <p style={{ color: 'var(--fg-muted)' }}>{t('empty')}</p>
         </div>
       ) : (
         <div className="flex flex-col gap-4">
           {slots.map((slot) => (
-            <SlotCard key={slot.id} slot={slot} />
+            <SlotCard key={slot.id} slot={slot} locale={locale} />
           ))}
         </div>
       )}
@@ -49,9 +52,11 @@ export default async function TrainingPage() {
   );
 }
 
-function SlotCard({ slot }: { slot: TrainingSlot & { active_registrations: number; spots_left: number } }) {
+async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_registrations: number; spots_left: number }; locale: string }) {
+  const t = await getTranslations('training');
   const date = new Date(slot.date_time);
   const isFull = slot.spots_left <= 0;
+  const dateLocale = locale === 'en' ? 'en-GB' : 'de-DE';
 
   return (
     <Link
@@ -63,10 +68,10 @@ function SlotCard({ slot }: { slot: TrainingSlot & { active_registrations: numbe
         <div>
           <p className="font-semibold text-lg mb-1">{slot.title}</p>
           <p className="text-sm mb-1" style={{ color: 'var(--fg-muted)' }}>
-            {date.toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long' })}
+            {date.toLocaleDateString(dateLocale, { weekday: 'long', day: 'numeric', month: 'long' })}
             {' · '}
-            {date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr
-            {' · '}{slot.duration_minutes} min
+            {date.toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{t('clockSuffix')}
+            {' · '}{slot.duration_minutes} {t('min')}
           </p>
           <p className="text-sm" style={{ color: 'var(--fg-muted)' }}>{slot.location}</p>
         </div>
@@ -81,7 +86,7 @@ function SlotCard({ slot }: { slot: TrainingSlot & { active_registrations: numbe
               color: isFull ? 'var(--fg-muted)' : 'var(--accent)',
             }}
           >
-            {isFull ? 'Ausgebucht' : `${slot.spots_left} Platz${slot.spots_left !== 1 ? 'e' : ''} frei`}
+            {isFull ? t('full') : t('spots', { count: slot.spots_left })}
           </span>
         </div>
       </div>

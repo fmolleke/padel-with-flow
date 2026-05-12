@@ -7,7 +7,8 @@ import {
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const { slot_id, name, email, playtomic_level } = body;
+  const { slot_id, name, email, playtomic_level, locale } = body;
+  const resolvedLocale: 'de' | 'en' = locale === 'en' ? 'en' : 'de';
 
   if (!slot_id || !name || !email) {
     return NextResponse.json({ error: 'slot_id, name und email sind erforderlich.' }, { status: 400 });
@@ -58,7 +59,8 @@ export async function POST(request: Request) {
 
   if (regError) return NextResponse.json({ error: 'Anmeldung konnte nicht gespeichert werden.' }, { status: 500 });
 
-  const dateTime = new Date(slot.date_time).toLocaleString('de-DE', {
+  const dateLocale = resolvedLocale === 'en' ? 'en-GB' : 'de-DE';
+  const dateTime = new Date(slot.date_time).toLocaleString(dateLocale, {
     dateStyle: 'full',
     timeStyle: 'short',
     timeZone: 'Europe/Berlin',
@@ -72,6 +74,7 @@ export async function POST(request: Request) {
       slotDateTime: dateTime,
       slotLocation: slot.location,
       cancellationToken: registration.cancellation_token,
+      locale: resolvedLocale,
     }),
     sendAdminNewRegistration({
       name,

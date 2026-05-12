@@ -180,6 +180,28 @@
     "cta1": "Back to home",
     "also": "Or jump to:"
   },
+  "training": {
+    "eyebrow": "Group Training",
+    "title": "Fixed Training Sessions",
+    "subtitle": "Sign up for an open training session — no subscription, no contract.",
+    "empty": "No training sessions currently available.",
+    "full": "Fully Booked",
+    "spots": "{count, plural, one {# spot left} other {# spots left}}",
+    "clockSuffix": "",
+    "min": "min",
+    "back": "← All Sessions",
+    "loading": "Loading…",
+    "successTitle": "Registration successful!",
+    "successBody": "You will receive a confirmation email with a cancellation link.",
+    "fullMessage": "This training session is unfortunately fully booked.",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "playtomicLabel": "Playtomic Level",
+    "optional": "optional",
+    "playtomicPlaceholder": "e.g. 4.5",
+    "submit": "Register now",
+    "submitting": "Registering…"
+  },
   "impressum": {
     "eyebrow": "Imprint",
     "title": "Legal Notice pursuant to § 5 TMG",

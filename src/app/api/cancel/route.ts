@@ -28,7 +28,8 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const { token } = await request.json();
+  const { token, locale } = await request.json();
+  const resolvedLocale: 'de' | 'en' = locale === 'en' ? 'en' : 'de';
 
   if (!token) return NextResponse.json({ error: 'Token fehlt.' }, { status: 400 });
 
@@ -50,7 +51,8 @@ export async function POST(request: Request) {
 
   if (updateError) return NextResponse.json({ error: 'Stornierung konnte nicht gespeichert werden.' }, { status: 500 });
 
-  const dateTime = new Date(data.training_slots.date_time).toLocaleString('de-DE', {
+  const dateLocale = resolvedLocale === 'en' ? 'en-GB' : 'de-DE';
+  const dateTime = new Date(data.training_slots.date_time).toLocaleString(dateLocale, {
     dateStyle: 'full',
     timeStyle: 'short',
     timeZone: 'Europe/Berlin',
@@ -62,6 +64,7 @@ export async function POST(request: Request) {
       name: data.name,
       slotTitle: data.training_slots.title,
       slotDateTime: dateTime,
+      locale: resolvedLocale,
     }),
     sendAdminCancellation({
       name: data.name,

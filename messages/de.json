@@ -180,6 +180,28 @@
     "cta1": "Zur Startseite",
     "also": "Oder direkt:"
   },
+  "training": {
+    "eyebrow": "Gruppentraining",
+    "title": "Fixe Trainingstermine",
+    "subtitle": "Melde dich für einen offenen Trainingstermin an — kein Abo, kein Vertrag.",
+    "empty": "Aktuell sind keine Trainingstermine verfügbar.",
+    "full": "Ausgebucht",
+    "spots": "{count, plural, one {# Platz frei} other {# Plätze frei}}",
+    "clockSuffix": " Uhr",
+    "min": "min",
+    "back": "← Alle Termine",
+    "loading": "Laden…",
+    "successTitle": "Anmeldung erfolgreich!",
+    "successBody": "Du erhältst eine Bestätigungs-E-Mail mit einem Link zur Stornierung.",
+    "fullMessage": "Dieses Training ist leider ausgebucht.",
+    "nameLabel": "Name",
+    "emailLabel": "E-Mail",
+    "playtomicLabel": "Playtomic-Level",
+    "optional": "optional",
+    "playtomicPlaceholder": "z.B. 4.5",
+    "submit": "Jetzt anmelden",
+    "submitting": "Wird angemeldet…"
+  },
   "impressum": {
     "eyebrow": "Impressum",
     "title": "Angaben gemäß § 5 TMG",
