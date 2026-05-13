@@ -1,6 +1,7 @@
 import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 import { LogoutButton } from './LogoutButton';
+import { DeleteSlotButton } from './DeleteSlotButton';
 
 async function getAllSlots() {
   const { data } = await supabase
@@ -18,6 +19,7 @@ async function getAllSlots() {
 
 export default async function AdminDashboard() {
   const slots = await getAllSlots();
+  const now = new Date();
 
   return (
     <main style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem' }}>
@@ -49,26 +51,34 @@ export default async function AdminDashboard() {
             {slots.map((slot) => {
               const date = new Date(slot.date_time);
               const isFull = slot.active_registrations >= slot.max_participants;
+              const isPast = date < now;
+              const pastStyle = isPast ? { opacity: 0.45 } : {};
               return (
                 <tr key={slot.id} style={{ borderBottom: '1px solid #1a1a1a' }}>
-                  <td style={tdStyle}>{slot.title}</td>
-                  <td style={tdStyle}>
+                  <td style={{ ...tdStyle, ...pastStyle }}>{slot.title}</td>
+                  <td style={{ ...tdStyle, ...pastStyle }}>
                     {date.toLocaleDateString('de-DE', { day: 'numeric', month: 'short', year: 'numeric' })}
                     {' '}
                     {date.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })}
+                    {isPast && (
+                      <span style={{ marginLeft: '0.5rem', fontSize: '0.7rem', color: '#888', background: '#1f1f1f', border: '1px solid #333', borderRadius: '4px', padding: '1px 5px' }}>
+                        vergangen
+                      </span>
+                    )}
                   </td>
-                  <td style={tdStyle}>
+                  <td style={{ ...tdStyle, ...pastStyle }}>
                     <span style={{ color: isFull ? '#f87171' : '#4ade80' }}>
                       {slot.active_registrations} / {slot.max_participants}
                     </span>
                   </td>
-                  <td style={tdStyle}>
+                  <td style={{ ...tdStyle, ...pastStyle }}>
                     <span style={{ color: slot.is_visible ? '#4ade80' : '#888' }}>
                       {slot.is_visible ? 'Ja' : 'Nein'}
                     </span>
                   </td>
-                  <td style={{ ...tdStyle, textAlign: 'right' }}>
+                  <td style={{ ...tdStyle, textAlign: 'right', display: 'flex', gap: '1rem', justifyContent: 'flex-end' }}>
                     <Link href={`/admin/slots/${slot.id}`} style={linkStyle}>Bearbeiten</Link>
+                    <DeleteSlotButton id={slot.id} />
                   </td>
                 </tr>
               );

@@ -115,6 +115,7 @@ export default function TrainingDetailPage({ params }: { params: Promise<{ id: s
                     {slot.price} €{' '}
                     <span className="eyebrow" style={{ display: 'inline' }}>{t('perPerson')}</span>
                   </p>
+                  <p className="eyebrow" style={{ marginTop: '6px', color: 'var(--fg-muted)' }}>{t('courtIncluded')}</p>
                 </div>
               )}
 

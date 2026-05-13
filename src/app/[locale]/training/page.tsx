@@ -94,7 +94,12 @@ async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_regist
         </div>
 
         <div className="slot-right">
-          {slot.price != null && <p className="slot-price">{slot.price} €</p>}
+          {slot.price != null && (
+              <>
+                <p className="slot-price">{slot.price} €</p>
+                <p className="eyebrow" style={{ marginTop: '4px', color: 'var(--fg-muted)', fontSize: '11px' }}>{t('courtIncluded')}</p>
+              </>
+            )}
           <span className={isFull ? 'slot-badge slot-badge-full' : 'slot-badge slot-badge-available'}>
             {isFull ? t('full') : t('spots', { count: slot.spots_left })}
           </span>

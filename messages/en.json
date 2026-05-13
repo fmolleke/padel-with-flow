@@ -204,6 +204,7 @@
     "labelLocation": "Location",
     "labelPrice": "Price",
     "perPerson": "per person",
+    "courtIncluded": "Court rental included",
     "labelAvailability": "Availability",
     "labelAbout": "About this session",
     "labelRegistration": "Registration"
