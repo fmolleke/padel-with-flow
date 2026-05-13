@@ -1,22 +1,35 @@
-# CODING AGENTS: READ THIS FIRST
+# Padel With Flow
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Personal website for Florian Molleker, certified DPV C-level padel coach based in Osnabrück and Ibbenbüren, Germany.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## What it does
 
-## What you should do — IMPORTANT
+- Presents training offers (individual, duo, small group) with pricing
+- Lists open training sessions that visitors can register for directly on the site
+- Sends confirmation emails on registration and cancellation
+- Available in German and English
 
-**Read `padel-with-flow/project/index.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## Tech stack
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+- [Next.js](https://nextjs.org) (App Router)
+- [Supabase](https://supabase.com) — database for training sessions and registrations
+- [Resend](https://resend.com) — transactional email
+- [next-intl](https://next-intl-docs.vercel.app) — i18n (DE / EN)
+- Deployed on [Netlify](https://netlify.com)
 
-## About the design files
+## Local development
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+```bash
+npm install
+npm run dev
+```
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Copy `.env.local.example` to `.env.local` and fill in your Supabase and Resend credentials.
 
-## Bundle contents
+## Testing
 
-- `padel-with-flow/README.md` — this file
-- `padel-with-flow/project/` — the `padel-with-flow` project files (HTML prototypes, assets, components)
+```bash
+npm test
+```
+
+Tests run automatically before each Netlify build — a failing test prevents deployment.
