@@ -184,6 +184,7 @@
     "eyebrow": "Offene Trainingssessions",
     "title": "Offene Trainingssessions",
     "subtitle": "Melde dich für einen offenen Trainingstermin an — kein Abo, kein Vertrag.",
+    "minParticipantsNote": "Trainings finden nur statt, wenn alle Plätze belegt sind.",
     "empty": "Aktuell sind keine Trainingstermine verfügbar.",
     "full": "Ausgebucht",
     "spots": "{count, plural, one {# Platz frei} other {# Plätze frei}}",

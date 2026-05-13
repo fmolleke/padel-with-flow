@@ -41,6 +41,9 @@ export default async function TrainingPage({ params }: { params: Promise<{ local
           <RevealElement id="training-subtitle" delay={2}>
             <p className="body-lg page-subtitle">{t('subtitle')}</p>
           </RevealElement>
+          <RevealElement id="training-note" delay={3}>
+            <p className="eyebrow" style={{ marginTop: '16px' }}>{t('minParticipantsNote')}</p>
+          </RevealElement>
         </div>
       </section>
 

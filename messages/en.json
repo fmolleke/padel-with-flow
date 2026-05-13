@@ -184,6 +184,7 @@
     "eyebrow": "Open Training Sessions",
     "title": "Open Training Sessions",
     "subtitle": "Sign up for an open training session — no subscription, no contract.",
+    "minParticipantsNote": "Sessions only take place when all spots are filled.",
     "empty": "No training sessions currently available.",
     "full": "Fully Booked",
     "spots": "{count, plural, one {# spot left} other {# spots left}}",
