@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         : 'Padel Training Osnabrück and Ibbenbüren — Florian Molleker · Padel Coach',
     },
     description: isDE
-      ? 'Padel Training in Osnabrück und Ibbenbüren mit Florian Molleker. Zertifizierter DPV C-Trainer. Einzeltraining ab 40 €, Duo ab 20 € pro Person. Für Anfänger, Fortgeschrittene und Turnierspieler.'
-      : 'Padel training in Osnabrück and Ibbenbüren with Florian Molleker. Certified DPV C-Trainer. Individual training from €40, duo from €20 per person. For beginners, advanced players and competitors.',
+      ? 'Padel Training in Osnabrück und Ibbenbüren mit Florian Molleker. Zertifizierter DPV C-Trainer. Preise ab 12,50 € pro Person. Für Anfänger, Fortgeschrittene und Turnierspieler.'
+      : 'Padel training in Osnabrück and Ibbenbüren with Florian Molleker. Certified DPV C-Trainer. Prices from €12.50 per person. For beginners, advanced players and competitors.',
     keywords: isDE
       ? [
           'Padel Trainer Osnabrück',
@@ -75,8 +75,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? 'Padel Training in Osnabrück und Ibbenbüren — Florian Molleker'
         : 'Padel Training Osnabrück and Ibbenbüren — Florian Molleker',
       description: isDE
-        ? 'Zertifizierter DPV C-Trainer in Osnabrück und Ibbenbüren. Einzeltraining ab 40 €, Duo ab 20 € pro Person. Strukturiert, ehrlich, mit Spaß.'
-        : 'Certified DPV C-Trainer in Osnabrück and Ibbenbüren. Individual training from €40, duo from €20 per person. Structured, honest, fun.',
+        ? 'Zertifizierter DPV C-Trainer in Osnabrück und Ibbenbüren. Preise ab 12,50 € pro Person. Strukturiert, ehrlich, mit Spaß.'
+        : 'Certified DPV C-Trainer in Osnabrück and Ibbenbüren. Prices from €12.50 per person. Structured, honest, fun.',
       url: `${BASE_URL}/${locale}`,
     },
     twitter: {
@@ -85,8 +85,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? 'Padel Training in Osnabrück und Ibbenbüren — Florian Molleker'
         : 'Padel Training Osnabrück and Ibbenbüren — Florian Molleker',
       description: isDE
-        ? 'Zertifizierter DPV C-Trainer in Osnabrück und Ibbenbüren. Einzeltraining ab 40 €, Duo ab 20 € pro Person.'
-        : 'Certified DPV C-Trainer in Osnabrück and Ibbenbüren. Individual training from €40, duo from €20 per person.',
+        ? 'Zertifizierter DPV C-Trainer in Osnabrück und Ibbenbüren. Preise ab 12,50 € pro Person.'
+        : 'Certified DPV C-Trainer in Osnabrück and Ibbenbüren. Prices from €12.50 per person.',
     },
   };
 }
