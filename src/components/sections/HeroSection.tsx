@@ -81,6 +81,7 @@ export function HeroSection() {
               src="/assets/oncourt.jpg"
               alt={t('home.photoAlt')}
               fill
+              sizes="(max-width: 980px) 400px, 460px"
               className="object-cover"
               priority
             />
