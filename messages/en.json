@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "training": "Training",
+    "training": "Open Training Sessions",
     "contact": "Contact"
   },
   "footer": {
@@ -181,8 +181,8 @@
     "also": "Or jump to:"
   },
   "training": {
-    "eyebrow": "Group Training",
-    "title": "Fixed Training Sessions",
+    "eyebrow": "Open Training Sessions",
+    "title": "Open Training Sessions",
     "subtitle": "Sign up for an open training session — no subscription, no contract.",
     "empty": "No training sessions currently available.",
     "full": "Fully Booked",

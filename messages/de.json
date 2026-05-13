@@ -3,7 +3,7 @@
     "home": "Start",
     "about": "Über mich",
     "services": "Leistungen",
-    "training": "Training",
+    "training": "Offene Trainingssessions",
     "contact": "Kontakt"
   },
   "footer": {
@@ -181,8 +181,8 @@
     "also": "Oder direkt:"
   },
   "training": {
-    "eyebrow": "Gruppentraining",
-    "title": "Fixe Trainingstermine",
+    "eyebrow": "Offene Trainingssessions",
+    "title": "Offene Trainingssessions",
     "subtitle": "Melde dich für einen offenen Trainingstermin an — kein Abo, kein Vertrag.",
     "empty": "Aktuell sind keine Trainingstermine verfügbar.",
     "full": "Ausgebucht",
