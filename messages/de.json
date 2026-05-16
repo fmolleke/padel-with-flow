@@ -64,7 +64,9 @@
     "item2": "FOTO · BANDEJA-DETAIL",
     "item3": "FOTO · COURT WEITWINKEL",
     "item4": "FOTO · TECHNIK-COACHING",
-    "item5": "FOTO · MATCH-PLAY"
+    "item5": "FOTO · MATCH-PLAY",
+    "showMore": "Alle Fotos anzeigen",
+    "showLess": "Weniger anzeigen"
   },
   "cta": {
     "title": "Bereit für die nächste Stunde?",

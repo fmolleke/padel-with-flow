@@ -78,7 +78,7 @@ export function HeroSection() {
         <div className="hero-photo">
           <div className="photo hero-photo-frame">
             <Image
-              src="/assets/oncourt.jpg"
+              src="/assets/DSC00565.JPG"
               alt={t('home.photoAlt')}
               fill
               sizes="(max-width: 980px) 400px, 460px"

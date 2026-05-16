@@ -333,6 +333,7 @@ section { padding: 120px 0; position: relative; }
 }
 
 .section-head { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 880px; margin-bottom: 80px; }
+.gallery .section-title { white-space: nowrap; }
 @media (max-width: 720px) { .section-head { margin-bottom: 48px; } }
 .section-title { font-size: clamp(36px, 5vw, 72px); line-height: 1.15; }
 
@@ -376,27 +377,21 @@ section { padding: 120px 0; position: relative; }
 .aud-row p { color: var(--fg-muted); line-height: 1.55; max-width: 420px; }
 .aud-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: var(--radius); justify-self: end; }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 80px;
-  gap: 16px;
+.gallery-grid { display: flex; gap: 16px; }
+.gallery-grid-col { display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.gallery-grid-wrapper { position: relative; }
+.gallery-grid-collapsed { max-height: 680px; overflow: hidden; }
+.gallery-fade-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 260px;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
 }
-.gi-1 { grid-column: span 4; grid-row: span 6; }
-.gi-2 { grid-column: span 3; grid-row: span 5; margin-top: 40px; }
-.gi-3 { grid-column: span 5; grid-row: span 5; }
-.gi-4 { grid-column: span 4; grid-row: span 5; }
-.gi-5 { grid-column: span 8; grid-row: span 4; }
+.gallery-expand { display: flex; justify-content: center; margin-top: 40px; }
 .gallery-item { transition: transform 0.5s var(--ease); }
 .gallery-item:hover { transform: translateY(-6px); }
-.gallery-item .photo { width: 100%; height: 100%; aspect-ratio: unset !important; }
-@media (max-width: 860px) {
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; }
-  .gi-1, .gi-2, .gi-3, .gi-4, .gi-5 { grid-column: span 1; grid-row: auto; margin: 0; }
-  .gallery-item .photo { aspect-ratio: 3/4 !important; }
-  .gi-5 { grid-column: span 2; }
-  .gi-5 .photo { aspect-ratio: 16/9 !important; }
-}
+.gallery-item img { width: 100% !important; height: auto !important; display: block; border-radius: 18px; }
 
 .big-cta { padding-bottom: 60px; }
 .cta-card {

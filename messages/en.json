@@ -64,7 +64,9 @@
     "item2": "PHOTO · BANDEJA DETAIL",
     "item3": "PHOTO · WIDE ANGLE COURT",
     "item4": "PHOTO · TECHNIQUE COACHING",
-    "item5": "PHOTO · MATCH PLAY"
+    "item5": "PHOTO · MATCH PLAY",
+    "showMore": "Show all photos",
+    "showLess": "Show less"
   },
   "cta": {
     "title": "Ready for your next hour?",

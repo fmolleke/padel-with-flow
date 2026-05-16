@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { RevealElement } from '@/hooks/useScrollReveal';
 import { CTASection } from '@/components/sections/CTASection';
@@ -12,7 +13,7 @@ export default function About() {
       {/* Page Head Section */}
       <section className="px-5 md:px-8 pt-24 pb-12 md:pt-[180px] md:pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 gap-10 items-end lg:grid-cols-[1.4fr_1fr] lg:gap-20">
+          <div className="grid grid-cols-1 gap-10 items-center lg:grid-cols-[1.2fr_1fr] lg:gap-20">
             <div>
               <RevealElement id="about-eyebrow">
                 <div className="font-mono text-xs tracking-widest font-medium text-fg-muted uppercase mb-6">{t('about.eyebrow')}</div>
@@ -33,11 +34,15 @@ export default function About() {
             </div>
 
             <RevealElement id="about-photo" delay={2}>
-              <div className="max-w-[380px] mx-auto">
-                <div className="aspect-[4/5] bg-bg-elev border border-line-soft rounded-lg flex items-center justify-center">
-                  <div className="text-sm text-fg-muted text-center px-4">{t('about.photoPlaceholder')}</div>
-                </div>
-              </div>
+              <Image
+                src="/assets/DSC02399.JPG"
+                alt="Florian Molleker"
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 100vw, 45vw"
+                quality={90}
+                style={{ width: '100%', height: 'auto', maxHeight: '480px', objectFit: 'contain', borderRadius: '12px' }}
+              />
             </RevealElement>
           </div>
         </div>
