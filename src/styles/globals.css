@@ -333,7 +333,7 @@ section { padding: 120px 0; position: relative; }
 }
 
 .section-head { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 880px; margin-bottom: 80px; }
-.gallery .section-title { white-space: nowrap; }
+.gallery .section-title { white-space: normal; }
 @media (max-width: 720px) { .section-head { margin-bottom: 48px; } }
 .section-title { font-size: clamp(36px, 5vw, 72px); line-height: 1.15; }
 
@@ -377,7 +377,7 @@ section { padding: 120px 0; position: relative; }
 .aud-row p { color: var(--fg-muted); line-height: 1.55; max-width: 420px; }
 .aud-tag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: var(--radius); justify-self: end; }
 
-.gallery-grid { display: flex; gap: 16px; }
+.gallery-grid { display: flex; gap: 16px; width: 100%; overflow: hidden; }
 .gallery-grid-col { display: flex; flex-direction: column; gap: 16px; flex: 1; }
 .gallery-grid-wrapper { position: relative; }
 .gallery-grid-collapsed { max-height: 680px; overflow: hidden; }
@@ -602,10 +602,24 @@ section { padding: 120px 0; position: relative; }
   gap: 24px;
   align-items: start;
 }
+.slot-content { display: flex; flex-direction: column; gap: 10px; }
+.slot-card-label { display: none; }
+.slot-price-mobile { display: none; }
+.slot-court-label { margin-top: 4px; color: var(--fg-muted); font-size: 11px; }
+.slot-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 2px; }
+
 @media (max-width: 600px) {
-  .slot-card { padding: 24px 20px; }
-  .slot-card-inner { grid-template-columns: 1fr auto; }
+  .slot-card-inner { grid-template-columns: 1fr; }
   .slot-date { display: none; }
+  .slot-right { display: none; }
+  .slot-content { gap: 0; }
+  .slot-card-label { display: block; margin-bottom: 8px; }
+  .slot-title { padding-bottom: 16px; }
+  .slot-price-mobile { display: flex; flex-direction: row; gap: 32px; }
+  .slot-meta-section, .slot-price-mobile, .slot-desc-section {
+    padding: 16px 0;
+    border-top: 1px solid var(--line-soft);
+  }
 }
 
 .slot-date { text-align: center; padding-top: 2px; }
@@ -628,7 +642,7 @@ section { padding: 120px 0; position: relative; }
   margin-top: 5px;
 }
 
-.slot-title { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 8px; }
+.slot-title { font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
 .slot-meta {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -637,9 +651,8 @@ section { padding: 120px 0; position: relative; }
   text-transform: uppercase;
   line-height: 1.6;
 }
-.slot-desc { font-size: 14px; color: var(--fg-muted); line-height: 1.55; margin-top: 12px; text-wrap: pretty; }
+.slot-desc { font-size: 14px; color: var(--fg-muted); line-height: 1.55; text-wrap: pretty; }
 
-.slot-right { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 2px; }
 .slot-price { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
 .slot-badge {
   font-family: var(--font-mono);

@@ -84,25 +84,53 @@ async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_regist
           <span className="slot-month">{date.toLocaleDateString(dateLocale, { month: 'short' })}</span>
         </div>
 
-        <div>
+        <div className="slot-content">
           <p className="slot-title">{slot.title}</p>
-          <p className="slot-meta">
-            {date.toLocaleDateString(dateLocale, { weekday: 'long' })}
-            {' · '}
-            {date.toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{t('clockSuffix')}
-            {' · '}{slot.duration_minutes} {t('min')}
-            {' · '}{slot.location}
-          </p>
-          {slot.description && <p className="slot-desc">{slot.description}</p>}
+
+          <div className="slot-meta-section">
+            <div className="slot-card-label eyebrow">{t('labelWhen')}</div>
+            <p className="slot-meta">
+              {date.toLocaleDateString(dateLocale, { weekday: 'long' })}
+              {' · '}
+              {date.toLocaleTimeString(dateLocale, { hour: '2-digit', minute: '2-digit' })}{t('clockSuffix')}
+              {' · '}{slot.duration_minutes} {t('min')}
+              {' · '}{slot.location}
+            </p>
+          </div>
+
+          {/* mobile only — desktop uses slot-right as 3rd grid column */}
+          <div className="slot-price-mobile">
+            {slot.price != null && (
+              <div className="slot-price-section">
+                <div className="slot-card-label eyebrow">{t('labelPrice')}</div>
+                <p className="slot-price">{slot.price} €</p>
+                <p className="eyebrow slot-court-label">{t('courtIncluded')}</p>
+              </div>
+            )}
+            <div className="slot-avail-section">
+              <div className="slot-card-label eyebrow">{t('labelAvailability')}</div>
+              <span className={isFull ? 'slot-badge slot-badge-full' : 'slot-badge slot-badge-available'}>
+                {isFull ? t('full') : t('spots', { count: slot.spots_left })}
+              </span>
+            </div>
+          </div>
+
+          {slot.description && (
+            <div className="slot-desc-section">
+              <div className="slot-card-label eyebrow">{t('labelAbout')}</div>
+              <p className="slot-desc">{slot.description}</p>
+            </div>
+          )}
         </div>
 
+        {/* desktop only — hidden on mobile */}
         <div className="slot-right">
           {slot.price != null && (
-              <>
-                <p className="slot-price">{slot.price} €</p>
-                <p className="eyebrow" style={{ marginTop: '4px', color: 'var(--fg-muted)', fontSize: '11px' }}>{t('courtIncluded')}</p>
-              </>
-            )}
+            <>
+              <p className="slot-price">{slot.price} €</p>
+              <p className="eyebrow slot-court-label">{t('courtIncluded')}</p>
+            </>
+          )}
           <span className={isFull ? 'slot-badge slot-badge-full' : 'slot-badge slot-badge-available'}>
             {isFull ? t('full') : t('spots', { count: slot.spots_left })}
           </span>
