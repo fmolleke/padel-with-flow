@@ -19,7 +19,7 @@
     "eyebrow": "Padel Coach · Osnabrück & Ibbenbüren",
     "heroLine1": "Padel Training",
     "heroLine2": "in Osnabrück & Ibbenbüren.",
-    "heroSub": "Certified C-Trainer. From your first shot to tournament play — structured, honest, and fun.",
+    "heroSub": "Certified C-Trainer. From your first shot to tournament play - structured, honest, and fun.",
     "cta1": "Request Hour",
     "cta2": "About Me",
     "photoAlt": "Florian on the court",
@@ -30,11 +30,11 @@
     "title": "Three pillars, one goal: you playing better.",
     "1": {
       "title": "Technique",
-      "body": "Clean groundstrokes, bandeja, vibora, lob. Small adjustments with big impact — filmed, shown, corrected."
+      "body": "Clean groundstrokes, bandeja, vibora, lob. Small adjustments with big impact - filmed, shown, corrected."
     },
     "2": {
       "title": "Tactics",
-      "body": "Court positioning, building pressure, handling pressure. You learn to read what's happening — before it happens."
+      "body": "Court positioning, building pressure, handling pressure. You learn to read what's happening - before it happens."
     },
     "3": {
       "title": "Mindset",
@@ -43,7 +43,7 @@
   },
   "audience": {
     "eyebrow": "For Whom",
-    "title": "No matter where you are — i'll meet you there.",
+    "title": "No matter where you are - i'll meet you there.",
     "1": {
       "title": "Beginners",
       "body": "First shots, first rules, first victories. No pressure."
@@ -77,9 +77,9 @@
     "photoPlaceholder": "PHOTO · PORTRAIT FLORIAN (PORTRAIT 4:5)",
     "title": "Florian Molleker.",
     "subtitle": "C-Trainer for Padel. Player. Learner.",
-    "p1": "I've been playing padel for over two years — started like many: through a friend, a first lesson, and then couldn't stop. Today I'm at Playtomic Level 5 and teach what I've learned through many hours, mistakes, and coaches.",
-    "p2": "As a certified C-Trainer, I work structured: every hour has a focus, each focus builds on the last. No random ball hitting — but a clear red thread that you follow to improve.",
-    "p3": "What's important to me: Honesty about realism. I won't tell you you'll be a pro in four weeks. I'll show you what you can work on today — and in four weeks you'll see the difference yourself.",
+    "p1": "I've been playing padel for over two years - started like many: through a friend, a first lesson, and then couldn't stop. Today I'm at Playtomic Level 5 and teach what I've learned through many hours, mistakes, and coaches.",
+    "p2": "As a certified C-Trainer, I work structured: every hour has a focus, each focus builds on the last. No random ball hitting - but a clear red thread that you follow to improve.",
+    "p3": "What's important to me: Honesty about realism. I won't tell you you'll be a pro in four weeks. I'll show you what you can work on today - and in four weeks you'll see the difference yourself.",
     "facts": "Facts",
     "cert": "Certification",
     "certValue": "C-Trainer Padel",
@@ -105,7 +105,7 @@
   "services": {
     "eyebrow": "Services & Prices",
     "title": "Transparent. Per Person. No Package Tricks.",
-    "subtitle": "All prices per person and hour. More players — cheaper per person. Court rental not included.",
+    "subtitle": "All prices per person and hour. More players - cheaper per person. Court rental not included.",
     "included": "What's included",
     "inc1": "Structured session with clear focus",
     "inc2": "Video feedback when needed",
@@ -137,10 +137,10 @@
     "unit": "/ Person · Hour",
     "process": {
       "eyebrow": "How It Works",
-      "title": "How it goes — from your first message to the last ball.",
+      "title": "How it goes - from your first message to the last ball.",
       "1": {
         "title": "Tell me who's coming",
-        "body": "Tell me how many people you'd like to train with — alone, in pairs, as a trio, or as a quartet."
+        "body": "Tell me how many people you'd like to train with - alone, in pairs, as a trio, or as a quartet."
       },
       "2": {
         "title": "We find a date",
@@ -148,22 +148,22 @@
       },
       "3": {
         "title": "You book the court",
-        "body": "You book and pay for the court directly with the venue — so you keep full control over time and location."
+        "body": "You book and pay for the court directly with the venue - so you keep full control over time and location."
       },
       "4": {
         "title": "We train",
-        "body": "On the agreed date we meet on the court. I'll bring the balls — you bring yourself."
+        "body": "On the agreed date we meet on the court. I'll bring the balls - you bring yourself."
       },
       "5": {
         "title": "Your topic, your focus",
-        "body": "Have something specific in mind — bandeja, return of serve, court position? Let me know, and I'll focus the entire session on exactly that."
+        "body": "Have something specific in mind - bandeja, return of serve, court position? Let me know, and I'll focus the entire session on exactly that."
       }
     }
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Write me.",
-    "subtitle": "The quickest way to reach me is Instagram or the in-app chat on Playtomic. Just drop your level, preferred location and weekdays — I usually reply the same day.",
+    "subtitle": "The quickest way to reach me is Instagram or the in-app chat on Playtomic. Just drop your level, preferred location and weekdays - I usually reply the same day.",
     "ig": "Instagram",
     "ighandle": "@padelwithflow",
     "iglabel": "Direct Message",
@@ -178,14 +178,14 @@
   "nf": {
     "eyebrow": "Hit out of court",
     "title": "This page doesn't exist.",
-    "sub": "Maybe a typo, maybe an old link. Back on court — let's keep playing.",
+    "sub": "Maybe a typo, maybe an old link. Back on court - let's keep playing.",
     "cta1": "Back to home",
     "also": "Or jump to:"
   },
   "training": {
     "eyebrow": "Open Training Sessions",
     "title": "Open Training Sessions",
-    "subtitle": "Sign up for an open training session — no subscription, no contract.",
+    "subtitle": "Sign up for an open training session - no subscription, no contract.",
     "minParticipantsNote": "Sessions only take place when all spots are filled.",
     "empty": "No training sessions currently available.",
     "full": "Fully Booked",
@@ -195,7 +195,7 @@
     "back": "← All Sessions",
     "loading": "Loading…",
     "successTitle": "Registration successful!",
-    "successBody": "You'll receive a confirmation email shortly — it also includes a link in case you need to cancel.",
+    "successBody": "You'll receive a confirmation email shortly - it also includes a link in case you need to cancel.",
     "fullMessage": "This training session is unfortunately fully booked.",
     "nameLabel": "Name",
     "emailLabel": "Email",

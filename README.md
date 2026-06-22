@@ -12,9 +12,9 @@ Personal website for Florian Molleker, certified DPV C-level padel coach based i
 ## Tech stack
 
 - [Next.js](https://nextjs.org) (App Router)
-- [Supabase](https://supabase.com) — database for training sessions and registrations
-- [Resend](https://resend.com) — transactional email
-- [next-intl](https://next-intl-docs.vercel.app) — i18n (DE / EN)
+- [Supabase](https://supabase.com) - database for training sessions and registrations
+- [Resend](https://resend.com) - transactional email
+- [next-intl](https://next-intl-docs.vercel.app) - i18n (DE / EN)
 - Deployed on [Netlify](https://netlify.com)
 
 ## Local development
@@ -32,4 +32,4 @@ Copy `.env.local.example` to `.env.local` and fill in your Supabase and Resend c
 npm test
 ```
 
-Tests run automatically before each Netlify build — a failing test prevents deployment.
+Tests run automatically before each Netlify build - a failing test prevents deployment.

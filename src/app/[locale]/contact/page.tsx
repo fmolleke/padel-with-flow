@@ -25,7 +25,7 @@ export default function Contact() {
         <div className="wrap">
           <div className="contact-grid">
 
-            {/* Instagram — primary card */}
+            {/* Instagram - primary card */}
             <RevealElement id="contact-ig">
               <a
                 className="contact-card primary"
@@ -49,7 +49,7 @@ export default function Contact() {
               </a>
             </RevealElement>
 
-            {/* Playtomic — secondary card */}
+            {/* Playtomic - secondary card */}
             <RevealElement id="contact-pt" delay={1}>
               <a
                 className="contact-card secondary"

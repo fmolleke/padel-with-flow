@@ -19,7 +19,7 @@
     "eyebrow": "Padel Trainer · Osnabrück & Ibbenbüren",
     "heroLine1": "Padel Training",
     "heroLine2": "in Osnabrück & Ibbenbüren.",
-    "heroSub": "Zertifizierter C-Trainer. Vom ersten Schlag bis zum Turnier — strukturiert, ehrlich, mit Spaß.",
+    "heroSub": "Zertifizierter C-Trainer. Vom ersten Schlag bis zum Turnier - strukturiert, ehrlich, mit Spaß.",
     "cta1": "Stunde anfragen",
     "cta2": "Über mich",
     "photoAlt": "Florian auf dem Court",
@@ -30,11 +30,11 @@
     "title": "Drei Säulen, ein Ziel: dass du besser spielst.",
     "1": {
       "title": "Technik",
-      "body": "Saubere Grundschläge, Bandeja, Vibora, Lob. Kleine Anpassungen mit großem Effekt — gefilmt, gezeigt, korrigiert."
+      "body": "Saubere Grundschläge, Bandeja, Vibora, Lob. Kleine Anpassungen mit großem Effekt - gefilmt, gezeigt, korrigiert."
     },
     "2": {
       "title": "Taktik",
-      "body": "Positionsspiel, Druck aufbauen, Druck überstehen. Du lernst zu lesen, was passiert — bevor es passiert."
+      "body": "Positionsspiel, Druck aufbauen, Druck überstehen. Du lernst zu lesen, was passiert - bevor es passiert."
     },
     "3": {
       "title": "Mindset",
@@ -43,7 +43,7 @@
   },
   "audience": {
     "eyebrow": "Für wen",
-    "title": "Egal wo du stehst — ich hole dich ab.",
+    "title": "Egal wo du stehst - ich hole dich ab.",
     "1": {
       "title": "Anfänger",
       "body": "Erste Schläge, erste Regeln, erste Erfolgserlebnisse. Ohne Druck."
@@ -77,9 +77,9 @@
     "photoPlaceholder": "FOTO · PORTRÄT FLORIAN (HOCH 4:5)",
     "title": "Florian Molleker.",
     "subtitle": "C-Trainer für Padel. Spieler. Lerner.",
-    "p1": "Ich spiele seit über zwei Jahren Padel — angefangen wie viele: durch einen Freund, eine erste Stunde, und dann nicht mehr aufgehört. Heute stehe ich auf Playtomic Level 5 und unterrichte das, was ich selbst durch viele Stunden, Fehler und Coaches gelernt habe.",
-    "p2": "Als zertifizierter C-Trainer arbeite ich strukturiert: jede Stunde hat einen Fokus, jeder Fokus baut auf dem letzten auf. Kein zufälliges Bälle-Spielen — sondern ein klarer roter Faden, an dem du dich entlang verbesserst.",
-    "p3": "Was mir wichtig ist: Ehrlichkeit über Realismus. Ich erzähl dir nicht, dass du in vier Wochen Profi bist. Ich zeig dir, woran du heute arbeiten kannst — und in vier Wochen siehst du den Unterschied selbst.",
+    "p1": "Ich spiele seit über zwei Jahren Padel - angefangen wie viele: durch einen Freund, eine erste Stunde, und dann nicht mehr aufgehört. Heute stehe ich auf Playtomic Level 5 und unterrichte das, was ich selbst durch viele Stunden, Fehler und Coaches gelernt habe.",
+    "p2": "Als zertifizierter C-Trainer arbeite ich strukturiert: jede Stunde hat einen Fokus, jeder Fokus baut auf dem letzten auf. Kein zufälliges Bälle-Spielen - sondern ein klarer roter Faden, an dem du dich entlang verbesserst.",
+    "p3": "Was mir wichtig ist: Ehrlichkeit über Realismus. Ich erzähl dir nicht, dass du in vier Wochen Profi bist. Ich zeig dir, woran du heute arbeiten kannst - und in vier Wochen siehst du den Unterschied selbst.",
     "facts": "Fakten",
     "cert": "Zertifizierung",
     "certValue": "C-Trainer Padel",
@@ -105,7 +105,7 @@
   "services": {
     "eyebrow": "Leistungen & Preise",
     "title": "Transparent. Pro Person. Keine Pakete-Tricks.",
-    "subtitle": "Alle Preise pro Person und Stunde. Mehr Spieler — pro Person günstiger. Court-Miete ist nicht enthalten.",
+    "subtitle": "Alle Preise pro Person und Stunde. Mehr Spieler - pro Person günstiger. Court-Miete ist nicht enthalten.",
     "included": "Was enthalten ist",
     "inc1": "Strukturierte Einheit mit klarem Fokus",
     "inc2": "Video-Feedback bei Bedarf",
@@ -137,10 +137,10 @@
     "unit": "/ Person · Stunde",
     "process": {
       "eyebrow": "Ablauf",
-      "title": "So läuft's ab — von der Anfrage bis zum letzten Ball.",
+      "title": "So läuft's ab - von der Anfrage bis zum letzten Ball.",
       "1": {
         "title": "Sag mir, wer mitkommt",
-        "body": "Du sagst mir, mit wie vielen Personen du trainieren möchtest — alleine, zu zweit, zu dritt oder zu viert."
+        "body": "Du sagst mir, mit wie vielen Personen du trainieren möchtest - alleine, zu zweit, zu dritt oder zu viert."
       },
       "2": {
         "title": "Wir finden einen Termin",
@@ -148,22 +148,22 @@
       },
       "3": {
         "title": "Du buchst den Court",
-        "body": "Du buchst und bezahlst den Court direkt bei der Halle — so behältst du die volle Kontrolle über Zeit und Ort."
+        "body": "Du buchst und bezahlst den Court direkt bei der Halle - so behältst du die volle Kontrolle über Zeit und Ort."
       },
       "4": {
         "title": "Wir trainieren",
-        "body": "Am vereinbarten Termin treffen wir uns auf dem Court. Bälle bringe ich mit — du bringst dich."
+        "body": "Am vereinbarten Termin treffen wir uns auf dem Court. Bälle bringe ich mit - du bringst dich."
       },
       "5": {
         "title": "Dein Thema, dein Fokus",
-        "body": "Hast du ein bestimmtes Thema im Kopf — Bandeja, Aufschlag-Return, Court-Position? Sag mir Bescheid, dann lege ich den Fokus der Einheit genau darauf."
+        "body": "Hast du ein bestimmtes Thema im Kopf - Bandeja, Aufschlag-Return, Court-Position? Sag mir Bescheid, dann lege ich den Fokus der Einheit genau darauf."
       }
     }
   },
   "contact": {
     "eyebrow": "Kontakt",
     "title": "Schreib mir.",
-    "subtitle": "Am schnellsten erreichst du mich auf Instagram oder über den Chat in Playtomic. Schreib kurz dein Level, gewünschten Ort und Wochentage — ich melde mich meist am selben Tag.",
+    "subtitle": "Am schnellsten erreichst du mich auf Instagram oder über den Chat in Playtomic. Schreib kurz dein Level, gewünschten Ort und Wochentage - ich melde mich meist am selben Tag.",
     "ig": "Instagram",
     "ighandle": "@padelwithflow",
     "iglabel": "Direktnachricht",
@@ -178,14 +178,14 @@
   "nf": {
     "eyebrow": "Aus dem Court geschlagen",
     "title": "Diese Seite existiert nicht.",
-    "sub": "Vielleicht ein Tippfehler, vielleicht ein alter Link. Zurück auf den Court — wir spielen weiter.",
+    "sub": "Vielleicht ein Tippfehler, vielleicht ein alter Link. Zurück auf den Court - wir spielen weiter.",
     "cta1": "Zur Startseite",
     "also": "Oder direkt:"
   },
   "training": {
     "eyebrow": "Offene Trainingssessions",
     "title": "Offene Trainingssessions",
-    "subtitle": "Melde dich für einen offenen Trainingstermin an — kein Abo, kein Vertrag.",
+    "subtitle": "Melde dich für einen offenen Trainingstermin an - kein Abo, kein Vertrag.",
     "minParticipantsNote": "Trainings finden nur statt, wenn alle Plätze belegt sind.",
     "empty": "Aktuell sind keine Trainingstermine verfügbar.",
     "full": "Ausgebucht",
@@ -195,7 +195,7 @@
     "back": "← Alle Termine",
     "loading": "Laden…",
     "successTitle": "Anmeldung erfolgreich!",
-    "successBody": "Du erhältst gleich eine Bestätigungs-E-Mail — dort findest du auch einen Link, falls du absagen musst.",
+    "successBody": "Du erhältst gleich eine Bestätigungs-E-Mail - dort findest du auch einen Link, falls du absagen musst.",
     "fullMessage": "Dieses Training ist leider ausgebucht.",
     "nameLabel": "Name",
     "emailLabel": "E-Mail",

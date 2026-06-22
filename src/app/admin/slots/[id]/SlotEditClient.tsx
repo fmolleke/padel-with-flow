@@ -71,7 +71,7 @@ export function SlotEditClient({ slot }: { slot: Slot }) {
                 <tr key={r.id} style={{ borderBottom: '1px solid #1a1a1a' }}>
                   <td style={tdStyle}>{r.name}</td>
                   <td style={tdStyle}>{r.email}</td>
-                  <td style={tdStyle}>{r.playtomic_level ?? '—'}</td>
+                  <td style={tdStyle}>{r.playtomic_level ?? '-'}</td>
                   <td style={{ ...tdStyle, textAlign: 'right' }}>
                     <button
                       onClick={() => handleRemoveParticipant(r.id, r.name)}

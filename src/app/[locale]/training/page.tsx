@@ -98,7 +98,7 @@ async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_regist
             </p>
           </div>
 
-          {/* mobile only — desktop uses slot-right as 3rd grid column */}
+          {/* mobile only - desktop uses slot-right as 3rd grid column */}
           <div className="slot-price-mobile">
             {slot.price != null && (
               <div className="slot-price-section">
@@ -123,7 +123,7 @@ async function SlotCard({ slot, locale }: { slot: TrainingSlot & { active_regist
           )}
         </div>
 
-        {/* desktop only — hidden on mobile */}
+        {/* desktop only - hidden on mobile */}
         <div className="slot-right">
           {slot.price != null && (
             <>

@@ -95,7 +95,7 @@ export async function sendAdminNewRegistration(params: {
       <p><strong>Neue Anmeldung eingegangen</strong></p>
       <p>Name: ${esc(params.name)}<br/>
       E-Mail: ${esc(params.email)}<br/>
-      Playtomic-Level: ${params.playtomicLevel ? esc(params.playtomicLevel) : '—'}<br/>
+      Playtomic-Level: ${params.playtomicLevel ? esc(params.playtomicLevel) : '-'}<br/>
       Training: ${esc(params.slotTitle)}<br/>
       Datum: ${esc(params.slotDateTime)}</p>
     `,

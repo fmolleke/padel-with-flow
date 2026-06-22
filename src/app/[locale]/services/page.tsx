@@ -119,8 +119,8 @@ export default function Services() {
               <div>
                 <div className="eyebrow">{t('services.notIncluded')}</div>
                 <ul className="check-list muted">
-                  <li><span className="check">—</span><span>{t('services.ni1')}</span></li>
-                  <li><span className="check">—</span><span>{t('services.ni2')}</span></li>
+                  <li><span className="check">-</span><span>{t('services.ni1')}</span></li>
+                  <li><span className="check">-</span><span>{t('services.ni2')}</span></li>
                 </ul>
               </div>
             </RevealElement>
