@@ -117,22 +117,26 @@
     "s1": {
       "title": "Einzeltraining",
       "subtitle": "1 Person",
-      "price": "40 €"
+      "price": "40 €",
+      "description": "Der Fokus liegt klar auf deinen Schlagtechniken. Du bekommst meine volle Aufmerksamkeit - jede Korrektur, jedes Feedback gehört dir."
     },
     "s2": {
       "title": "Duo",
       "subtitle": "2 Personen",
-      "price": "20 €"
+      "price": "20 €",
+      "description": "Neben Technik kommt hier auch Strategie ins Spiel: Positionsspiel, Kommunikation, Spielverständnis. Ideal für feste Teampartner - aber auch für alle, die gerne zusammen spielen."
     },
     "s3": {
       "title": "Kleingruppe",
-      "subtitle": "3-4 Personen",
-      "price": "15 €"
+      "subtitle": "3 Personen",
+      "price": "15 €",
+      "description": "Hier simulieren wir echte Match-Szenarien. Der Fokus liegt auf Strategie und Taktik - damit das Gelernte im echten Spiel sitzt."
     },
     "s4": {
       "title": "Quartett",
       "subtitle": "4 Personen",
-      "price": "12,50 €"
+      "price": "12,50 €",
+      "description": "Hier simulieren wir echte Match-Szenarien. Der Fokus liegt auf Strategie und Taktik - damit das Gelernte im echten Spiel sitzt."
     },
     "unit": "/ Person · Stunde",
     "process": {

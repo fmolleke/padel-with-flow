@@ -31,6 +31,7 @@ export default function Services() {
                 <div className="price-num">01</div>
                 <h3 className="display price-name">{t('services.s1.title')}</h3>
                 <div className="price-sub">{t('services.s1.subtitle')}</div>
+                <p className="price-desc">{t('services.s1.description')}</p>
                 <div className="price-amount">
                   <span className="price-value display">{t('services.s1.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
@@ -49,6 +50,7 @@ export default function Services() {
                 <div className="price-num">02</div>
                 <h3 className="display price-name">{t('services.s2.title')}</h3>
                 <div className="price-sub">{t('services.s2.subtitle')}</div>
+                <p className="price-desc">{t('services.s2.description')}</p>
                 <div className="price-amount">
                   <span className="price-value display">{t('services.s2.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
@@ -67,6 +69,7 @@ export default function Services() {
                 <div className="price-num">03</div>
                 <h3 className="display price-name">{t('services.s3.title')}</h3>
                 <div className="price-sub">{t('services.s3.subtitle')}</div>
+                <p className="price-desc">{t('services.s3.description')}</p>
                 <div className="price-amount">
                   <span className="price-value display">{t('services.s3.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>
@@ -85,6 +88,7 @@ export default function Services() {
                 <div className="price-num">04</div>
                 <h3 className="display price-name">{t('services.s4.title')}</h3>
                 <div className="price-sub">{t('services.s4.subtitle')}</div>
+                <p className="price-desc">{t('services.s4.description')}</p>
                 <div className="price-amount">
                   <span className="price-value display">{t('services.s4.price')}</span>
                   <span className="price-unit">{t('services.unit')}</span>

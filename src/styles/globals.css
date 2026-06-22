@@ -179,6 +179,7 @@ button {
 /* Price Card Quartett - Dark Mode */
 [data-theme='dark'] .price-card.highlight .price-num,
 [data-theme='dark'] .price-card.highlight .price-sub,
+[data-theme='dark'] .price-card.highlight .price-desc,
 [data-theme='dark'] .price-card.highlight .price-unit {
   color: #000000;
 }
@@ -454,7 +455,9 @@ section { padding: 120px 0; position: relative; }
 
 .price-num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em; color: var(--fg-muted); margin-bottom: 28px; }
 .price-name { font-size: 32px; margin-bottom: 4px; }
-.price-sub { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--fg-muted); text-transform: uppercase; margin-bottom: 28px; }
+.price-sub { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--fg-muted); text-transform: uppercase; margin-bottom: 12px; }
+.price-desc { font-size: 13px; line-height: 1.6; color: var(--fg-muted); margin-bottom: 28px; }
+.price-card.highlight .price-desc { color: var(--fg-muted); }
 .price-amount { margin-top: auto; margin-bottom: 24px; }
 .price-value { display: block; font-size: 56px; line-height: 1; letter-spacing: -0.04em; margin-bottom: 4px; }
 .price-card.highlight .price-value { color: var(--accent); }

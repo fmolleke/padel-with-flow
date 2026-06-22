@@ -117,22 +117,26 @@
     "s1": {
       "title": "Individual Training",
       "subtitle": "1 Person",
-      "price": "40 €"
+      "price": "40 €",
+      "description": "The focus is clearly on your shot technique. You get my full attention - every correction, every piece of feedback is yours."
     },
     "s2": {
       "title": "Duo",
       "subtitle": "2 Persons",
-      "price": "20 €"
+      "price": "20 €",
+      "description": "Beyond technique, strategy enters the picture: positioning, communication, game understanding. Ideal for regular playing partners - and for anyone who enjoys playing together."
     },
     "s3": {
       "title": "Small Group",
-      "subtitle": "3-4 Persons",
-      "price": "15 €"
+      "subtitle": "3 Persons",
+      "price": "15 €",
+      "description": "Here we simulate real match scenarios. The focus is on strategy and tactics - so what you've learned sticks in actual play."
     },
     "s4": {
       "title": "Quartet",
       "subtitle": "4 Persons",
-      "price": "12.50 €"
+      "price": "12.50 €",
+      "description": "Here we simulate real match scenarios. The focus is on strategy and tactics - so what you've learned sticks in actual play."
     },
     "unit": "/ Person · Hour",
     "process": {
